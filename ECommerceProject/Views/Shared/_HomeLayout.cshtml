@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>@ViewBag.Title | E-Commerce Project</title>
+    <link rel="stylesheet" href="Styles/css/style.css">
+
+    
+</head>
+<body>
+    <h1>Saludos Brothers</h1>
+    <div>
+        @RenderBody()
+    </div>
+
+    <div>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
