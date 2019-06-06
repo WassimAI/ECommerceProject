@@ -135,6 +135,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Styles\img\logo.png" />
+    <Content Include="Styles\img\main_banner.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +160,11 @@
     <Content Include="Views\Shared\_HomeLayout.cshtml" />
     <Content Include="Styles\sass\base\_base.scss" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Styles\layout\_header.scss" />
+    <Content Include="Styles\sass\abstract\_mixins.scss" />
+    <Content Include="Styles\sass\abstract\_variables.scss" />
+    <Content Include="Styles\sass\base\_utilities.scss" />
+    <Content Include="Styles\pages\_home.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -173,11 +180,7 @@
     <Folder Include="Models\" />
     <Folder Include="Styles\components\" />
     <Folder Include="Styles\css\" />
-    <Folder Include="Styles\img\" />
     <Folder Include="Styles\js\" />
-    <Folder Include="Styles\layout\" />
-    <Folder Include="Styles\pages\" />
-    <Folder Include="Styles\sass\abstract\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

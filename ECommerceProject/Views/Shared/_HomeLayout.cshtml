@@ -5,24 +5,41 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width initial-scale=1.0" />
     <title>@ViewBag.Title | E-Commerce Project</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Nunito+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Styles/css/style.css">
-
+    @*<link rel="stylesheet" href="Scripts/bootstrap/css/bootstrap.css">*@
+    @*@Styles.Render("~/Styles/CSS")*@
     
 </head>
 <body>
-    <h1>Saludos Brothers</h1>
-    <div>
-        @RenderBody()
-    </div>
+    <main>
+        <section class="main-header">
+            <div class="header">
+                <div class="header__logo-box">
+                    <img src="~/Styles/img/logo.png" alt="" class="header_logo" />
+                </div>
+                <div class="header__content">
+                    <div class="header__primary">Casual Shop</div>
+                    <div class="header__secondary u-margin-bottom-medium">Your Destination for Casual wear</div>
+                    <p class="header__quote">You won't regret it!</p>
+                </div>
+            </div>
+        </section>
 
-    <div>
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        <!--This is the main content of all pages-->
+        <div>
+            @RenderBody()
+        </div>
 
+        <div>
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>
+    </main>
 
     @RenderSection("scripts", required: false)
+    <script src="~/Scripts/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/bootstrap/js/bootstrap.js" type="text/javascript"></script>
 </body>
 </html>

@@ -1,1 +1,9 @@
-﻿@import "base/_base.scss";
+﻿@import "abstract/variables";
+@import "abstract/mixins";
+
+@import "base/base";
+@import "base/utilities";
+
+@import "pages/home";
+
+@import "layout/header";

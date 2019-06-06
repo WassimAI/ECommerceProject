@@ -9,12 +9,13 @@ html {
 }
 
 body {
+    font-family: 'Nunito Sans', sans-serif;
     box-sizing: border-box;
-    padding: 3rem;
-    letter-spacing: 1.5px;
+    padding: 2rem;
+    background-color: #e6faff;
 }
 
 ::selection {
-    background-color: grey;
-    color: white;
+    background-color: #007a99;
+    color: #e6faff;
 }
