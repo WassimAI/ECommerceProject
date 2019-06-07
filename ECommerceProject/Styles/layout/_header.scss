@@ -3,7 +3,7 @@
     height: 80vh;
     position: relative;
     background-size: cover;
-    background-image:linear-gradient(to right, rgba($color-primary-light, .5), rgba($color-primary-dark, .5)), url(../img/main_banner.jpg);
+    background-image:linear-gradient(to right, rgba($color-primary-light, .5), rgba($color-primary-medium, .5)), url(../img/main_banner.jpg);
 
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
@@ -20,6 +20,7 @@
         line-height: 1.7;
         letter-spacing: 1.5rem;
         color: $color-primary-light;
+        text-transform: uppercase;
     }
 
     &__secondary {

@@ -25,6 +25,44 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 2rem; }
 
+.u-margin-top-small {
+  margin-top: 2rem; }
+
+.section-collections {
+  padding-top: 7rem;
+  background-color: white;
+  margin-top: -15vh; }
+
+.row {
+  max-width: 100%;
+  padding: 1rem 1rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 1rem; }
+  .row [class^="col-"] {
+    float: left; }
+    @media (max-width: 900px) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 1rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row .col-1-of-2 {
+    width: calc((100% - 1rem)/2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2*1rem)/3); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3*1rem)/4); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2*1rem)/3) + 1rem); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3*1rem)/4) + 1rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3*1rem)/4) + 2*1rem); }
+
 .header {
   height: 80vh;
   position: relative;
@@ -44,7 +82,8 @@ body {
     font-weight: 700;
     line-height: 1.7;
     letter-spacing: 1.5rem;
-    color: #e6faff; }
+    color: #e6faff;
+    text-transform: uppercase; }
   .header__secondary {
     font-size: 5rem;
     font-weight: 400;
@@ -61,3 +100,57 @@ body {
     position: absolute;
     top: 1rem;
     left: 2rem; }
+
+.collections__row {
+  border-bottom: 0.5px solid rgba(0, 0, 102, 0.5); }
+
+.collections__col {
+  position: relative;
+  text-align: center; }
+
+.collections__img {
+  transition: all .2s; }
+
+.collections__description {
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  left: 4rem;
+  opacity: 0;
+  font-size: 2rem;
+  color: #007a99;
+  font-weight: 300;
+  transition: all .2s; }
+
+.collections__link:link, .collections__link:visited {
+  text-decoration: none;
+  cursor: pointer; }
+
+.collections__link:hover, .collections__link:active {
+  cursor: pointer; }
+
+.collections__link-anchor {
+  display: block;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #000066;
+  font-weight: 400;
+  transition: all .2s; }
+  .collections__link-anchor:hover {
+    transform: scale(1.1); }
+
+.collections__col:hover .collections__img {
+  opacity: .5;
+  cursor: default; }
+
+.collections__col:hover .collections__description {
+  opacity: 1;
+  transform: translateY(-15rem); }
+
+.heading-primary {
+  font-family: 'Indie Flower', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.2rem;
+  text-transform: uppercase;
+  text-align: center; }

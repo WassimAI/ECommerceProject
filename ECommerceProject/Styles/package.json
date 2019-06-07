@@ -4,7 +4,7 @@
   "description": "Styles for Ecommerce Project",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "watch:sass": "node-sass sass/main.scss css/style.css",
     "devserver":"live-server"
   },
   "author": "Wassim",

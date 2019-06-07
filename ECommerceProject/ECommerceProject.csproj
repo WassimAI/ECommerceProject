@@ -135,6 +135,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Images\collection_sample.jpg" />
+    <Content Include="Images\sample_product.jpeg" />
     <Content Include="Styles\img\logo.png" />
     <Content Include="Styles\img\main_banner.jpg" />
     <Content Include="Web.config" />
@@ -165,6 +167,10 @@
     <Content Include="Styles\sass\abstract\_variables.scss" />
     <Content Include="Styles\sass\base\_utilities.scss" />
     <Content Include="Styles\pages\_home.scss" />
+    <Content Include="Styles\layout\_grid.scss" />
+    <Content Include="Views\Shared\_collectionsPartial.cshtml" />
+    <Content Include="Styles\components\_collections.scss" />
+    <Content Include="Styles\components\_headings.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -178,7 +184,6 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Models\" />
-    <Folder Include="Styles\components\" />
     <Folder Include="Styles\css\" />
     <Folder Include="Styles\js\" />
   </ItemGroup>
