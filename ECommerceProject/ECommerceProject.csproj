@@ -136,6 +136,8 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Images\collection_sample.jpg" />
+    <Content Include="Images\promotions\featured-img-1.jpg" />
+    <Content Include="Images\promotions\featured-img-2.jpg" />
     <Content Include="Images\sample_product.jpeg" />
     <Content Include="Styles\img\logo.png" />
     <Content Include="Styles\img\main_banner.jpg" />
@@ -171,6 +173,8 @@
     <Content Include="Views\Shared\_collectionsPartial.cshtml" />
     <Content Include="Styles\components\_collections.scss" />
     <Content Include="Styles\components\_headings.scss" />
+    <Content Include="Views\Shared\_promotionsPartial.cshtml" />
+    <Content Include="Styles\components\_promotions.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

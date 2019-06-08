@@ -33,6 +33,10 @@ body {
   background-color: white;
   margin-top: -15vh; }
 
+.section-promotions {
+  background-color: #e6faff;
+  padding: 5rem 0; }
+
 .row {
   max-width: 100%;
   padding: 1rem 1rem;
@@ -154,3 +158,36 @@ body {
   letter-spacing: 1.2rem;
   text-transform: uppercase;
   text-align: center; }
+
+.promotions {
+  transform: skewX(-12deg); }
+  .promotions__row {
+    display: table;
+    width: 85%;
+    height: auto;
+    padding: 0; }
+  .promotions__left {
+    width: 66.66667%;
+    background-color: white;
+    display: table-cell;
+    padding: 2rem 3rem;
+    vertical-align: middle;
+    color: #000066; }
+    .promotions__left--description {
+      font-size: 2rem;
+      font-weight: 200;
+      transform: skewX(12deg); }
+    .promotions__left--price {
+      font-size: 3rem;
+      font-weight: 500;
+      transform: skewX(12deg); }
+    .promotions__left--button {
+      transform: skewX(12deg); }
+  .promotions__right {
+    width: 33.3333%;
+    background-color: white;
+    display: table-cell;
+    vertical-align: middle; }
+  .promotions__img {
+    transform: skewX(12deg);
+    width: 100%; }
