@@ -1,0 +1,51 @@
+﻿.btn {
+
+    &, &:link, &:visited {
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        padding: 1rem;
+        //This is in case it was an anchor element with such class
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 .5rem 1rem rgba(#000, .7);
+
+        transition: all .2s;
+    }
+
+    &:hover, &:focus {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(#000, .7);
+    }
+
+    &:active, &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba(#000, .7);
+    }
+
+    &--primary {
+        background-color: rgba($color-primary-light, .7);
+        color: $color-primary-dark;
+        font-family: 'Indie Flower', cursive;
+        font-weight: 700;
+        font-size: 1.7rem;
+    }
+
+    &--secpondary {
+        background-color: $color-primary-dark;
+        color: $color-primary-light;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+
+    &--buy {
+        background-color: $color-green-light;
+        color: $color-green-dark;
+        font-family: 'Indie Flower', cursive;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+}

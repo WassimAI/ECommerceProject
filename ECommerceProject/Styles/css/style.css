@@ -30,11 +30,11 @@ body {
 
 .section-collections {
   padding-top: 7rem;
-  background-color: white;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(204, 255, 230, 0.4));
   margin-top: -15vh; }
 
 .section-promotions {
-  background-color: #e6faff;
+  background-image: linear-gradient(to right, rgba(230, 250, 255, 0.7), rgba(0, 0, 102, 0.5)), url(../img/promotions-background.jpg);
   padding: 5rem 0; }
 
 .row {
@@ -71,7 +71,7 @@ body {
   height: 80vh;
   position: relative;
   background-size: cover;
-  background-image: linear-gradient(to right, rgba(230, 250, 255, 0.5), rgba(0, 122, 153, 0.5)), url(../img/main_banner.jpg);
+  background-image: linear-gradient(to right, rgba(230, 250, 255, 0.5), rgba(51, 153, 255, 0.5)), url(../img/main_banner.jpg);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); }
   .header__content {
@@ -121,27 +121,7 @@ body {
   bottom: 0;
   left: 4rem;
   opacity: 0;
-  font-size: 2rem;
-  color: #007a99;
-  font-weight: 300;
   transition: all .2s; }
-
-.collections__link:link, .collections__link:visited {
-  text-decoration: none;
-  cursor: pointer; }
-
-.collections__link:hover, .collections__link:active {
-  cursor: pointer; }
-
-.collections__link-anchor {
-  display: block;
-  text-decoration: none;
-  font-size: 2rem;
-  color: #000066;
-  font-weight: 400;
-  transition: all .2s; }
-  .collections__link-anchor:hover {
-    transform: scale(1.1); }
 
 .collections__col:hover .collections__img {
   opacity: .5;
@@ -160,15 +140,19 @@ body {
   text-align: center; }
 
 .promotions {
-  transform: skewX(-12deg); }
+  position: relative; }
   .promotions__row {
     display: table;
-    width: 85%;
-    height: auto;
-    padding: 0; }
+    width: 80%;
+    padding: 0;
+    border-bottom: 2px solid #000066;
+    border-left: 2px solid #000066;
+    margin-bottom: 4rem;
+    background-color: rgba(230, 250, 255, 0.5);
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%); }
   .promotions__left {
-    width: 66.66667%;
-    background-color: white;
+    width: 40%;
     display: table-cell;
     padding: 2rem 3rem;
     vertical-align: middle;
@@ -176,18 +160,67 @@ body {
     .promotions__left--description {
       font-size: 2rem;
       font-weight: 200;
-      transform: skewX(12deg); }
+      margin-bottom: 1rem;
+      text-align: center; }
     .promotions__left--price {
-      font-size: 3rem;
-      font-weight: 500;
-      transform: skewX(12deg); }
+      margin-bottom: 1rem;
+      font-family: 'Indie Flower', cursive; }
+      .promotions__left--price-old {
+        font-weight: 500;
+        text-decoration: line-through;
+        color: #ff6666;
+        font-family: 'Nunito Sans', sans-serif; }
+      .promotions__left--price-new {
+        font-weight: 500;
+        color: #00331f;
+        font-family: 'Nunito Sans', sans-serif; }
     .promotions__left--button {
-      transform: skewX(12deg); }
+      text-align: center; }
   .promotions__right {
-    width: 33.3333%;
-    background-color: white;
+    width: 60%;
     display: table-cell;
-    vertical-align: middle; }
-  .promotions__img {
-    transform: skewX(12deg);
-    width: 100%; }
+    vertical-align: middle;
+    overflow: hidden; }
+  .promotions__img:hover {
+    cursor: pointer; }
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+  transition: all .2s; }
+
+.btn:hover, .btn:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7); }
+
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7); }
+
+.btn--primary {
+  background-color: rgba(230, 250, 255, 0.7);
+  color: #000066;
+  font-family: 'Indie Flower', cursive;
+  font-weight: 700;
+  font-size: 1.7rem; }
+
+.btn--secpondary {
+  background-color: #000066;
+  color: #e6faff;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem; }
+
+.btn--buy {
+  background-color: #4dffb8;
+  color: #00331f;
+  font-family: 'Indie Flower', cursive;
+  font-weight: 700;
+  font-size: 1.5rem; }

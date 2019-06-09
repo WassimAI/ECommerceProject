@@ -1,11 +1,12 @@
 ﻿.section-collections {
     padding-top: 7rem;
-    background-color: white;
+    background-image: linear-gradient(to right, rgba(#fff, .7), rgba($color-white-blue, .4));
     margin-top: -15vh;
 }
 
 .section-promotions {
-    background-color: $color-primary-light;
+    background-image: linear-gradient(to right, rgba($color-primary-light,.7),
+                         rgba($color-primary-dark, .5)), url(../img/promotions-background.jpg);
     padding: 5rem 0;
 }
 
