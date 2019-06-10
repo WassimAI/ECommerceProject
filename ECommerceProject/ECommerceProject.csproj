@@ -136,9 +136,13 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Images\collection_sample.jpg" />
+    <Content Include="Images\Featured\featured-item-2.jpg" />
+    <Content Include="Images\Featured\featured-item-1.jpg" />
     <Content Include="Images\promotions\featured-img-1.jpg" />
     <Content Include="Images\promotions\featured-img-2.jpg" />
     <Content Include="Images\sample_product.jpeg" />
+    <Content Include="Styles\img\featured-1.jpg" />
+    <Content Include="Styles\img\featured-2.jpg" />
     <Content Include="Styles\img\logo.png" />
     <Content Include="Styles\img\main_banner.jpg" />
     <Content Include="Styles\img\promotions-background.jpg" />
@@ -177,6 +181,8 @@
     <Content Include="Views\Shared\_promotionsPartial.cshtml" />
     <Content Include="Styles\components\_promotions.scss" />
     <Content Include="Styles\components\_button.scss" />
+    <Content Include="Views\Shared\_featuredPartial.cshtml" />
+    <Content Include="Styles\components\_feature.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

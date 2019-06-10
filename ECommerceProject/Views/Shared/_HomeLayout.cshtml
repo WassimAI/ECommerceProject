@@ -7,6 +7,7 @@
     <title>@ViewBag.Title | E-Commerce Project</title>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Nunito+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Styles/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="~/Styles/img/logo.png">
     @*<link rel="stylesheet" href="Scripts/bootstrap/css/bootstrap.css">*@
     @*@Styles.Render("~/Styles/CSS")*@
     
@@ -25,14 +26,8 @@
                 </div>
             </div>
         </section>
-        <section class="section-collections">
-            @Html.Partial("_collectionsPartial")
-        </section>
-        <section class="section-promotions">
-            @Html.Partial("_promotionsPartial")
-        </section>
 
-        <!--This is the main content of all pages-->
+        <!--This is the main content of Landing Page (rendered in Home page)-->
         <div>
             @RenderBody()
         </div>

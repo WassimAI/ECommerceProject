@@ -4,6 +4,13 @@
     Layout = "~/Views/Shared/_HomeLayout.cshtml";
 }
 
-<h2>This is the Home Page</h2>
-<p>I like this website it seems nice</p>
+<section class="section-featured">
+    @Html.Partial("_featuredPartial")
+</section>
+<section class="section-collections">
+    @Html.Partial("_collectionsPartial")
+</section>
+<section class="section-promotions">
+    @Html.Partial("_promotionsPartial")
+</section>
 

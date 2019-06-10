@@ -30,12 +30,16 @@ body {
 
 .section-collections {
   padding-top: 7rem;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(204, 255, 230, 0.4));
-  margin-top: -15vh; }
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(204, 255, 230, 0.4)); }
 
 .section-promotions {
   background-image: linear-gradient(to right, rgba(230, 250, 255, 0.7), rgba(0, 0, 102, 0.5)), url(../img/promotions-background.jpg);
   padding: 5rem 0; }
+
+.section-featured {
+  background-image: linear-gradient(to bottom, rgba(230, 250, 255, 0.7), rgba(0, 0, 102, 0.5)), url(../img/featured-2.jpg);
+  padding-top: 12rem;
+  margin-top: -15vh; }
 
 .row {
   max-width: 100%;
@@ -133,9 +137,17 @@ body {
 
 .heading-primary {
   font-family: 'Indie Flower', cursive;
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 700;
   letter-spacing: 1.2rem;
+  text-transform: uppercase;
+  text-align: center; }
+
+.heading-secondary {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1rem;
   text-transform: uppercase;
   text-align: center; }
 
@@ -234,3 +246,24 @@ body {
   font-family: 'Indie Flower', cursive;
   font-weight: 700;
   font-size: 1.5rem; }
+
+.feature__container {
+  width: 80%;
+  display: table;
+  margin-left: 10%; }
+
+.feature__left {
+  width: 40%;
+  display: table-cell;
+  overflow: hidden; }
+
+.feature__right {
+  width: 60%;
+  display: table-cell;
+  background-color: rgba(230, 250, 255, 0.5);
+  vertical-align: middle;
+  padding: 2rem 1rem; }
+
+.feature__img {
+  display: block;
+  width: 100%; }

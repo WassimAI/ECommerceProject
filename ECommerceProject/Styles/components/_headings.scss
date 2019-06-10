@@ -1,8 +1,17 @@
 ﻿.heading-primary {
     font-family: 'Indie Flower', cursive;
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 700;
     letter-spacing: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.heading-secondary {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1rem;
     text-transform: uppercase;
     text-align: center;
 }

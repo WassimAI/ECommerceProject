@@ -1,0 +1,30 @@
+﻿.feature {
+
+    &__row {
+    }
+
+    &__container{
+        width:80%;
+        display: table;
+        margin-left: 10%;
+    }
+
+    &__left {
+        width: 40%;
+        display: table-cell;
+        overflow: hidden;
+    }
+
+    &__right {
+        width: 60%;
+        display: table-cell;
+        background-color: rgba($color-primary-light, .5);
+        vertical-align: middle;
+        padding: 2rem 1rem;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+    }
+}
