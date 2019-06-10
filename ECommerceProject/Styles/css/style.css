@@ -145,12 +145,15 @@ body {
     display: table;
     width: 80%;
     padding: 0;
-    border-bottom: 2px solid #000066;
     border-left: 2px solid #000066;
     margin-bottom: 4rem;
     background-color: rgba(230, 250, 255, 0.5);
     -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%); }
+    .promotions__row:not(:last-child) {
+      border-bottom: 2px solid #000066; }
+    .promotions__row-btn {
+      position: relative; }
   .promotions__left {
     width: 40%;
     display: table-cell;
@@ -183,6 +186,13 @@ body {
     overflow: hidden; }
   .promotions__img:hover {
     cursor: pointer; }
+  .promotions__see-all-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    margin-top: 2rem; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -211,7 +221,7 @@ body {
   font-weight: 700;
   font-size: 1.7rem; }
 
-.btn--secpondary {
+.btn--secondary {
   background-color: #000066;
   color: #e6faff;
   font-family: 'Nunito Sans', sans-serif;
