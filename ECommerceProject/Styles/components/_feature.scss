@@ -7,12 +7,15 @@
         width:80%;
         display: table;
         margin-left: 10%;
+
+        box-shadow: 0 1rem 2rem rgba(#000, .7);
     }
 
     &__left {
         width: 40%;
         display: table-cell;
         overflow: hidden;
+        position: relative;
     }
 
     &__right {
@@ -21,10 +24,61 @@
         background-color: rgba($color-primary-light, .5);
         vertical-align: middle;
         padding: 2rem 1rem;
+        font-size: 2rem;
+
+        &--row {
+
+            &-1{
+            }
+
+            &-2{
+                margin-top:10%;
+            }
+        }
     }
 
     &__img {
         display: block;
         width: 100%;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
+
+    &__btn-wrapper {
+        text-align: center;
+    }
+
+    &__img-caption {
+        position: absolute;
+        color: $color-primary-medium;
+        font-size: 3rem;
+        margin-left: 10%;
+        font-weight: 700;
+        padding: .5rem;
+        opacity: 0;
+        text-transform: uppercase;
+
+        transition: all .2s;
+
+        &-1{
+            top:0;
+        }
+
+        &-2 {
+            bottom:0;
+        }
+    }
+
+    &__img:hover + &__img-caption-1 {
+        opacity: 1;
+        transform: translateY(10rem);
+    }
+
+    &__img:hover + &__img-caption-2 {
+        opacity: 1;
+        transform: translateY(-10rem);
+    }
+
 }
