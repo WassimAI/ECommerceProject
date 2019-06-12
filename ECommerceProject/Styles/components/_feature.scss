@@ -52,11 +52,7 @@
 
     &__img-caption {
         position: absolute;
-        color: $color-primary-medium;
-        font-size: 3rem;
-        margin-left: 10%;
-        font-weight: 700;
-        padding: .5rem;
+        margin-left: 20%;
         opacity: 0;
         text-transform: uppercase;
 
@@ -71,12 +67,12 @@
         }
     }
 
-    &__img:hover + &__img-caption-1 {
+    &__left:hover &__img-caption-1 {
         opacity: 1;
         transform: translateY(10rem);
     }
 
-    &__img:hover + &__img-caption-2 {
+    &__left:hover &__img-caption-2 {
         opacity: 1;
         transform: translateY(-10rem);
     }

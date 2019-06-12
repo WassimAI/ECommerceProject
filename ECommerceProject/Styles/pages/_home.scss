@@ -13,6 +13,13 @@
     background-image: linear-gradient(to bottom, rgba($color-primary-light, .7),
     rgba($color-primary-dark, .5)), url(../img/featured-2.jpg);
     padding-top: 12rem;
-    margin-top: -15vh;
+    margin-top: -20vh;
+}
+
+.section-footer {
+    //background-image: linear-gradient(to right, rgba($color-primary-light,1), rgba($color-primary-medium, 1));
+    background-color: #fff;
+    padding: 2rem 0;
+    font-size: $default-font-size;
 }
 

@@ -183,6 +183,7 @@
     <Content Include="Styles\components\_button.scss" />
     <Content Include="Views\Shared\_featuredPartial.cshtml" />
     <Content Include="Styles\components\_feature.scss" />
+    <Content Include="Styles\layout\_footer.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
