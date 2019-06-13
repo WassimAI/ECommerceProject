@@ -8,6 +8,16 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
 
+    @include respond(tab-port) {
+        -webkit-clip-path: none;
+        clip-path: none;
+    }
+
+    @include respond(tab-land) {
+        -webkit-clip-path: none;
+        clip-path: none;
+    }
+
     &__content {
         @include centerElement;
         text-align: center;
@@ -21,6 +31,18 @@
         letter-spacing: 1.5rem;
         color: $color-primary-light;
         text-transform: uppercase;
+
+        @includerespond (tab-port) {
+            font-size: 4rem;
+            font-weight: 400;
+            letter-spacing: 1rem;
+        }
+
+        @includerespond (tab-land) {
+            font-size: 5rem;
+            font-weight: 400;
+            letter-spacing: 1rem;
+        }
     }
 
     &__secondary {
@@ -29,6 +51,13 @@
         line-height:1.2;
         letter-spacing: 1.5rem;
         color: $color-primary-light;
+
+        @include respond(tab-port) {
+            font-size: 3rem;
+            font-weight: 100;
+            letter-spacing: .5rem;
+            line-height: 1;
+        }
     }
 
     &__quote {
@@ -37,12 +66,32 @@
         font-style: italic;
         font-weight: 400;
         font-family: 'Indie Flower', cursive;
+        padding-bottom: 2rem;
+
+        @include respond(tab-port) {
+            font-size: 2rem;
+            font-weight: 100;
+            letter-spacing: .5rem;
+        }
     }
 
     &__logo-box {
         position: absolute;
         top: 1rem;
         left: 2rem;
+
+        @include respond(tab-port) {
+            top:0;
+            left:0;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+
+        @include respond(tab-land){
+            width: 50%;
+        }
     }
 
 }

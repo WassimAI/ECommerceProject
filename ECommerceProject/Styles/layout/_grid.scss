@@ -12,8 +12,9 @@
         float: left;
         //background-color: aqua;
 
-        @media (max-width: 900px) {
+        @include respond(tab-port) {
             width: 100% !important;
+            margin-bottom: 1rem;
         }
 
         &:not(:last-child) {

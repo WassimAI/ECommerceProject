@@ -135,12 +135,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Images\collection_sample.jpg" />
+    <Content Include="Images\Collections\collection_sample.jpg" />
+    <Content Include="Images\Collections\glass-collections.jpg" />
+    <Content Include="Images\Collections\kids-collection.jpg" />
+    <Content Include="Images\Collections\men-collection.jpg" />
+    <Content Include="Images\Collections\purse-collection.jpg" />
+    <Content Include="Images\Collections\women-collection.jpg" />
     <Content Include="Images\Featured\featured-item-2.jpg" />
     <Content Include="Images\Featured\featured-item-1.jpg" />
     <Content Include="Images\promotions\featured-img-1.jpg" />
     <Content Include="Images\promotions\featured-img-2.jpg" />
-    <Content Include="Images\sample_product.jpeg" />
     <Content Include="Styles\img\featured-1.jpg" />
     <Content Include="Styles\img\featured-2.jpg" />
     <Content Include="Styles\img\logo.png" />

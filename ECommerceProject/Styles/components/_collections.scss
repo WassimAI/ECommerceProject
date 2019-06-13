@@ -2,6 +2,10 @@
 
     &__row {
         border-bottom: .5px solid rgba($color-primary-dark, .5);
+
+        @include respond(tab-port) {
+            border-bottom: none;
+        }
     }
 
     &__col {
@@ -21,15 +25,31 @@
         opacity: 0;
 
         transition: all .2s;
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+            opacity: 1;
+            left:0;
+            bottom: 50%;
+        }
     }
 
     &__col:hover &__img {
         opacity: .5;
         cursor: default;
+
+        @include respond(tab-port) {
+            opacity: 1;
+        }
     }
 
     &__col:hover &__description {
         opacity: 1;
         transform: translateY(-15rem);
+
+        @include respond(tab-port) {
+            transform: none;
+        }
     }
 }

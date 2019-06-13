@@ -3,11 +3,10 @@
     &__row {
     }
 
-    &__container{
-        width:80%;
+    &__container {
+        width: 80%;
         display: table;
         margin-left: 10%;
-
         box-shadow: 0 1rem 2rem rgba(#000, .7);
     }
 
@@ -16,6 +15,10 @@
         display: table-cell;
         overflow: hidden;
         position: relative;
+
+        @include respond(tab-port) {
+            width: 80%;
+        }
     }
 
     &__right {
@@ -26,13 +29,18 @@
         padding: 2rem 1rem;
         font-size: 2rem;
 
+        @include respond(tab-port) {
+            width: 0;
+            display: none;
+        }
+
         &--row {
 
-            &-1{
+            &-1 {
             }
 
-            &-2{
-                margin-top:10%;
+            &-2 {
+                margin-top: 10%;
             }
         }
     }
@@ -55,26 +63,47 @@
         margin-left: 20%;
         opacity: 0;
         text-transform: uppercase;
-
         transition: all .2s;
 
-        &-1{
-            top:0;
+        @include respond(tab-port) {
+            opacity: 1;
+            margin-left: 0;
+            width: 100%;
+            text-align:center;
+        }
+
+        &-1 {
+            top: 0;
+
+            @include respond(tab-port) {
+                top: 10rem;
+            }
         }
 
         &-2 {
-            bottom:0;
+            bottom: 0;
+
+            @include respond(tab-port) {
+                bottom: 10rem;
+            }
         }
     }
 
     &__left:hover &__img-caption-1 {
         opacity: 1;
         transform: translateY(10rem);
+
+        @include respond(tab-port) {
+            transform: none;
+        }
     }
 
     &__left:hover &__img-caption-2 {
         opacity: 1;
         transform: translateY(-10rem);
-    }
 
+        @include respond(tab-port) {
+            transform: none;
+        }
+    }
 }

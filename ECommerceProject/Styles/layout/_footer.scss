@@ -1,25 +1,26 @@
 ﻿.footer {
 
     &__row{
-        display: table;
+        //display: table;
     }
 
     &__links{
-        display: table-cell;
-        vertical-align: middle;
-        width: 40%;
+        //display: table-cell;
+        //vertical-align: middle;
+        width: 100%;
+        text-align: center;
     }
 
     &__logo {
-        display: table-cell;
-        width: 30%;
+        //display: table-cell;
+        //width: 30%;
         text-align: center;
     }
 
     &__copy {
-        width: 30%;
-        display: table-cell;
-        vertical-align: middle;
+        //width: 30%;
+        //display: table-cell;
+        //vertical-align: middle;
 
         &--text {
             text-align: center;
@@ -49,7 +50,7 @@
 
         &:link, &:visited {
             color: $color-primary-dark;
-            background-color: transparent;
+            background-color: #fff;
             text-decoration: none;
             //text-transform: uppercase;
             font-weight: 700;
