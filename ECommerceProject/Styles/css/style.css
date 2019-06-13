@@ -223,6 +223,107 @@ body {
 .footer__icon {
   font-size: 3rem; }
 
+.navigation {
+  position: relative;
+  /*This is for the text or shape on the button*/ }
+  .navigation__checkbox {
+    display: none; }
+  .navigation__background {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    background-image: linear-gradient(to left, rgba(230, 250, 255, 0.8), #000066);
+    right: 4.5rem;
+    top: 3rem;
+    position: fixed;
+    transition: all .2s;
+    z-index: 1000; }
+  .navigation__button {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: #fff;
+    right: 4rem;
+    top: 3rem;
+    position: fixed;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7);
+    z-index: 2000; }
+    .navigation__button:hover {
+      cursor: pointer; }
+  .navigation__icon {
+    position: relative;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    display: inline-block; }
+    .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+      width: 4rem;
+      height: 2px;
+      background-color: grey;
+      transition: all .2s; }
+    .navigation__icon::before, .navigation__icon::after {
+      content: "";
+      position: absolute;
+      left: 0; }
+    .navigation__icon::before {
+      top: -1rem; }
+    .navigation__icon::after {
+      top: 1rem; }
+  .navigation__nav {
+    width: 0;
+    opacity: 0;
+    position: fixed;
+    z-index: 1500;
+    top: 1rem;
+    right: 16rem;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    @media only screen and (max-width: 56.25em) {
+      .navigation__nav {
+        left: 0; } }
+  .navigation__list {
+    list-style: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center; }
+  .navigation__item {
+    display: block;
+    padding: 0 1rem; }
+    .navigation__item:not(:last-child) {
+      margin-bottom: 1rem; }
+  .navigation__link, .navigation__link:link, .navigation__link:visited {
+    text-decoration: none;
+    color: #fff;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+    background-size: 225%;
+    transition: all .4s; }
+  .navigation__link:hover, .navigation__link:active {
+    background-position: 100%;
+    color: #000066;
+    transform: translateX(1rem); }
+  .navigation__checkbox:checked ~ .navigation__background {
+    transform: scale(22); }
+    @media only screen and (max-width: 56.25em) {
+      .navigation__checkbox:checked ~ .navigation__background {
+        transform: scale(80); } }
+  .navigation__checkbox:checked ~ .navigation__nav {
+    opacity: 1;
+    width: 25vw; }
+    @media only screen and (max-width: 56.25em) {
+      .navigation__checkbox:checked ~ .navigation__nav {
+        top: 15rem;
+        width: 100vw; } }
+  .navigation__button:hover .navigation__icon::before {
+    top: -1.2rem; }
+  .navigation__button:hover .navigation__icon::after {
+    top: 1.2rem; }
+  .navigation__checkbox:checked ~ .navigation__button .navigation__icon {
+    background-color: transparent; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+    top: 0;
+    transform: rotate(45deg); }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+    top: 0;
+    transform: rotate(-45deg); }
+
 .collections__row {
   border-bottom: 0.5px solid rgba(0, 0, 102, 0.5); }
   @media only screen and (max-width: 56.25em) {
