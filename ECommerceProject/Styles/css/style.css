@@ -223,6 +223,12 @@ body {
 .footer__icon {
   font-size: 3rem; }
 
+.general-navigation {
+  visibility: hidden; }
+  @media only screen and (max-width: 56.25em) {
+    .general-navigation {
+      visibility: visible; } }
+
 .navigation {
   position: relative;
   /*This is for the text or shape on the button*/ }
@@ -323,6 +329,26 @@ body {
   .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
     top: 0;
     transform: rotate(-45deg); }
+
+.navigation-top {
+  position: relative; }
+  .navigation-top-nav {
+    position: fixed;
+    margin-bottom: 5rem; }
+  .navigation-top-list {
+    list-style: none;
+    background-color: #000066;
+    font-size: 2rem; }
+  .navigation-top-item {
+    padding: 1rem;
+    display: inline-block; }
+    .navigation-top-item:not(:last-child) {
+      margin-right: 2rem; }
+  .navigation-top-link, .navigation-top-link:link, .navigation-top-link:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #fff; }
 
 .collections__row {
   border-bottom: 0.5px solid rgba(0, 0, 102, 0.5); }

@@ -1,4 +1,12 @@
-﻿.navigation {
+﻿.general-navigation {
+    visibility: hidden;
+    
+    @include respond(tab-port) {
+        visibility: visible;
+    }
+}
+
+.navigation {
 
     position: relative;
 

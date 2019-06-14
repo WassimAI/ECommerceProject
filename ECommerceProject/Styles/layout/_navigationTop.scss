@@ -1,0 +1,33 @@
+﻿.navigation-top {
+
+    position: relative;
+
+    &-nav{
+        position: fixed;
+        margin-bottom: 5rem;
+    }
+
+    &-list {
+        list-style: none;
+        background-color: $color-primary-dark;
+        font-size: 2rem;
+    }
+
+    &-item {
+        padding: 1rem;
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+
+    &-link {
+        &,&:link, &:visited {
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            color: #fff;
+        }
+    }
+}

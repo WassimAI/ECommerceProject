@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Nunito+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/Styles/css/linea_font.css">
+    <link rel="stylesheet" href="~/Styles/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="~/Styles/img/logo.png">
+</head>
+<body>
+    <div class="navigation-top">
+        <div class="navigation-top-nav">
+            <div class="navigation-top-list">
+                <div class="navigation-top-item">
+                    <a class="navigation-top-link">Home</a>
+                </div>
+                <div class="navigation-top-item">
+                    <a class="navigation-top-link">Collections</a>
+                </div>
+                <div class="navigation-top-item">
+                    <a class="navigation-top-link">Featured</a>
+                </div>
+                <div class="navigation-top-item">
+                    <a class="navigation-top-link">Promotions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="general-navigation">
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <div class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">Women Collection</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Kids Collection</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Men Collection</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Accessories</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Purses</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Sun Glasses</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Promotions</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">About us</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Contact us</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Our Story</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
