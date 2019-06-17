@@ -1,22 +1,112 @@
 ﻿.product {
 
-    &__price {
-
+    &__row {
+        position: relative;
     }
 
-    &__title {
-
+    &__col {
+        text-align: center;
     }
 
-    &__description {
-
+    &__tag {
+        position: absolute;
+        top:1.5rem;
+        left:1.5rem;
+        background-color: $color-gold;
+        width:5rem;
+        padding:.5rem;
+        font-size: $default-font-size;
+        font-family: 'Indie Flower', cursive;
+        font-weight: bolder;
+        box-shadow: 0 .5rem 1rem rgba(#000,.7);
+        text-align: center;
     }
 
     &__img {
+    }
+
+    &__link {
 
     }
 
-    &__discount {
+    &__priceWrapper {
+        position: relative;
+        text-align: center;
+    }
 
+    &__price {
+        font-size: $medium-font-size;
+        font-family: 'Indie Flower', cursive;
+        color: $color-primary-dark;
+        font-weight: bold;
+
+        &--show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &--hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &__title {
+        font-size: $medium-font-size;
+        font-family: 'Indie Flower', cursive;
+        color: $color-primary-dark;
+        font-weight: bold;
+    }
+
+    &__description {
+        font-size: $default-font-size;
+        color: rgba($color-primary-dark, .8);
+        font-weight: bold;
+    }
+
+    &__buy {
+        
+    }
+
+    &__discount {
+        background-image: linear-gradient(to right, $color-primary-medium, $color-primary-dark);
+        width: 80%;
+        border-radius: 10px;
+        font-size: $medium-font-size;
+        font-weight: bold;
+        color: #fff;
+        font-family: 'Indie Flower', cursive;
+        padding: 1rem;
+        //margin-bottom: 2rem;
+        @include centerElement;
+        opacity: 0;
+        visibility: hidden;
+
+        &--text {
+            @include respond(tab-port) {
+                display: none;
+            }
+        }
+
+        /*This class to be toggled through JS*/
+
+        &--show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &--hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &--old {
+            float: left;
+            text-decoration: line-through;
+        }
+
+        &--new {
+            float: right;
+        }
     }
 }

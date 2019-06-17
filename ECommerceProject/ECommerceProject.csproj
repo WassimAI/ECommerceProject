@@ -143,6 +143,10 @@
     <Content Include="Images\Collections\women-collection.jpg" />
     <Content Include="Images\Featured\featured-item-2.jpg" />
     <Content Include="Images\Featured\featured-item-1.jpg" />
+    <Content Include="Images\Products\prod-1.jpg" />
+    <Content Include="Images\Products\prod-2.jpg" />
+    <Content Include="Images\Products\prod-3.jpg" />
+    <Content Include="Images\Products\prod-4.jpg" />
     <Content Include="Images\promotions\featured-img-1.jpg" />
     <Content Include="Images\promotions\featured-img-2.jpg" />
     <Content Include="Styles\img\featured-1.jpg" />
@@ -208,7 +212,6 @@
     <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
-    <Folder Include="Images\Products\" />
     <Folder Include="Models\" />
     <Folder Include="Styles\css\" />
     <Folder Include="Styles\js\" />

@@ -58,4 +58,17 @@
             font-size:1rem;
         }
     }
+
+    &--cart {
+        background-color: $color-primary-light;
+        color: $color-primary-dark;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+
+        @include respond(tab-port) {
+            font-weight:100;
+            font-size:1rem;
+        }
+    }
 }

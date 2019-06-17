@@ -141,7 +141,7 @@
         width: 25vw;
 
         @include respond(tab-port) {
-            top: 15rem;
+            top: 10rem;
             width: 100vw;
         }
     }

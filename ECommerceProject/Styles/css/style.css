@@ -318,7 +318,7 @@ body {
     width: 25vw; }
     @media only screen and (max-width: 56.25em) {
       .navigation__checkbox:checked ~ .navigation__nav {
-        top: 15rem;
+        top: 10rem;
         width: 100vw; } }
   .navigation__button:hover .navigation__icon::before {
     top: -1.2rem; }
@@ -334,7 +334,8 @@ body {
     transform: rotate(-45deg); }
 
 .navigation-top {
-  position: relative; }
+  position: relative;
+  z-index: 3000; }
   @media only screen and (max-width: 56.25em) {
     .navigation-top {
       display: none; } }
@@ -574,6 +575,17 @@ body {
       font-weight: 100;
       font-size: 1rem; } }
 
+.btn--cart {
+  background-color: #e6faff;
+  color: #000066;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .btn--cart {
+      font-weight: 100;
+      font-size: 1rem; } }
+
 .feature__container {
   width: 80%;
   display: table;
@@ -648,3 +660,80 @@ body {
   @media only screen and (max-width: 56.25em) {
     .feature__left:hover .feature__img-caption-2 {
       transform: none; } }
+
+.product__row {
+  position: relative; }
+
+.product__col {
+  text-align: center; }
+
+.product__tag {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background-color: #FFD700;
+  width: 5rem;
+  padding: .5rem;
+  font-size: 1.5rem;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bolder;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+  text-align: center; }
+
+.product__priceWrapper {
+  position: relative;
+  text-align: center; }
+
+.product__price {
+  font-size: 2.5rem;
+  font-family: 'Indie Flower', cursive;
+  color: #000066;
+  font-weight: bold; }
+  .product__price--show {
+    visibility: visible;
+    opacity: 1; }
+  .product__price--hide {
+    opacity: 0;
+    visibility: hidden; }
+
+.product__title {
+  font-size: 2.5rem;
+  font-family: 'Indie Flower', cursive;
+  color: #000066;
+  font-weight: bold; }
+
+.product__description {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 102, 0.8);
+  font-weight: bold; }
+
+.product__discount {
+  background-image: linear-gradient(to right, #3399ff, #000066);
+  width: 80%;
+  border-radius: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Indie Flower', cursive;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  /*This class to be toggled through JS*/ }
+  @media only screen and (max-width: 56.25em) {
+    .product__discount--text {
+      display: none; } }
+  .product__discount--show {
+    visibility: visible;
+    opacity: 1; }
+  .product__discount--hide {
+    opacity: 0;
+    visibility: hidden; }
+  .product__discount--old {
+    float: left;
+    text-decoration: line-through; }
+  .product__discount--new {
+    float: right; }
