@@ -1,16 +1,24 @@
 ﻿.navigation-top {
-
     position: relative;
 
-    &-nav{
+    @include respond(tab-port) {
+        display: none;
+    }
+
+    &-nav {
+        overflow: hidden;
         position: fixed;
-        margin-bottom: 5rem;
+        top: 0;
+        left: 0;
+        width: 100%;
     }
 
     &-list {
         list-style: none;
-        background-color: $color-primary-dark;
+        //background-color: $color-primary-dark;
+        background-image: linear-gradient(to right, rgba($color-primary-dark, .5), rgba($color-primary-dark, 1));
         font-size: 2rem;
+        text-align: center;
     }
 
     &-item {
@@ -23,11 +31,20 @@
     }
 
     &-link {
-        &,&:link, &:visited {
+        &, &:link, &:visited {
             text-decoration: none;
             text-transform: uppercase;
             display: inline-block;
             color: #fff;
+            padding: 2px;
+            border-radius: 5px;
+
+            transition: all .2s;
+        }
+
+        &:hover, &:active {
+            background-color: $color-primary-light;
+            color: $color-primary-dark;
         }
     }
 }

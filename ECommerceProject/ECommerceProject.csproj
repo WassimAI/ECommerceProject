@@ -193,6 +193,9 @@
     <Content Include="Views\Shared\_GeneralLayout.cshtml" />
     <Content Include="Views\Product\all-products.cshtml" />
     <Content Include="Styles\layout\_navigationTop.scss" />
+    <Content Include="Styles\pages\_generalLayoutPages.scss" />
+    <Content Include="Views\Product\_ProductsPartial.cshtml" />
+    <Content Include="Styles\components\_product.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -205,6 +208,7 @@
     <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Images\Products\" />
     <Folder Include="Models\" />
     <Folder Include="Styles\css\" />
     <Folder Include="Styles\js\" />
