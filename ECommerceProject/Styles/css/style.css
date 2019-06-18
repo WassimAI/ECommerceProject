@@ -21,7 +21,9 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  -webkit-scroll-behavior: smooth;
+  scroll-behavior: smooth; }
 
 body {
   font-family: 'Nunito Sans', sans-serif;
@@ -436,7 +438,8 @@ body {
   text-align: center; }
 
 .promotions {
-  position: relative; }
+  position: relative;
+  transition: all .3s; }
   .promotions__row {
     display: table;
     width: 80%;
@@ -670,9 +673,9 @@ body {
 .product__tag {
   position: absolute;
   top: 1.5rem;
-  left: 1.5rem;
+  left: 4rem;
   background-color: #FFD700;
-  width: 5rem;
+  width: 6rem;
   padding: .5rem;
   font-size: 1.5rem;
   font-family: 'Indie Flower', cursive;
