@@ -51,3 +51,7 @@ C:\mySites\ECommerceProject\ECommerceProject\bin\System.Web.Mvc.xml
 C:\mySites\ECommerceProject\ECommerceProject\obj\Debug\ECommerceProject.csprojResolveAssemblyReference.cache
 C:\mySites\ECommerceProject\ECommerceProject\obj\Debug\ECommerceProject.dll
 C:\mySites\ECommerceProject\ECommerceProject\obj\Debug\ECommerceProject.pdb
+C:\mySites\ECommerceProject\ECommerceProject\bin\EntityFramework.dll
+C:\mySites\ECommerceProject\ECommerceProject\bin\EntityFramework.SqlServer.dll
+C:\mySites\ECommerceProject\ECommerceProject\bin\EntityFramework.xml
+C:\mySites\ECommerceProject\ECommerceProject\bin\EntityFramework.SqlServer.xml
