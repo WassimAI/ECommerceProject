@@ -21,8 +21,8 @@ namespace ECommerceProject.App_Start
             //bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
             //            "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap/js/bootstrap.js"));
+            bundles.Add(new StyleBundle("~/bundles/bootstrap").Include(
+                      "~/Areas/Admin/Styles/bootstrap/css/bootstrap.css"));
 
             bundles.Add(new StyleBundle("~/Styles/CSS").Include(
                       "~/Styles/css/style.css"));

@@ -142,6 +142,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\Collections\collection_sample.jpg" />
     <Content Include="Images\Collections\glass-collections.jpg" />
@@ -157,6 +161,20 @@
     <Content Include="Images\Products\prod-4.jpg" />
     <Content Include="Images\promotions\featured-img-1.jpg" />
     <Content Include="Images\promotions\featured-img-2.jpg" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Scripts\bootstrap\css\bootstrap.css" />
+    <Content Include="Scripts\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Scripts\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap\js\bootstrap.js" />
+    <Content Include="Scripts\bootstrap\js\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.0.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Styles\img\featured-1.jpg" />
     <Content Include="Styles\img\featured-2.jpg" />
     <Content Include="Styles\img\logo.png" />
@@ -168,6 +186,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
@@ -212,6 +231,20 @@
     <Content Include="Styles\pages\_generalLayoutPages.scss" />
     <Content Include="Views\Product\_ProductsPartial.cshtml" />
     <Content Include="Styles\components\_product.scss" />
+    <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Scripts\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Scripts\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Scripts\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Scripts\jquery-1.9.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -221,9 +254,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Models\ViewModels\" />
     <Folder Include="Styles\css\" />
     <Folder Include="Styles\js\" />
