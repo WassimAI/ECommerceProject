@@ -16,5 +16,8 @@ namespace ECommerceProject.Models.Entities
         public string Description { get; set; }
         public string ImageUrl { get; set; }
         public int VendorId { get; set; }
+
+        [ForeignKey("VendorId")]
+        public virtual Vendor vendor { get; set; }
     }
 }
