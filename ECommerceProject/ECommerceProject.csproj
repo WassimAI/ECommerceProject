@@ -186,6 +186,7 @@
     <Content Include="Scripts\jquery-1.9.0.js" />
     <Content Include="Scripts\jquery-1.9.0.min.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\myScripts\imgPreview.js" />
     <Content Include="Styles\img\featured-1.jpg" />
     <Content Include="Styles\img\featured-2.jpg" />
     <Content Include="Styles\img\logo.png" />
@@ -210,6 +211,7 @@
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Entities\Collection.cs" />
     <Compile Include="Models\Entities\Vendor.cs" />
+    <Compile Include="Models\MainVM\HomePageVM.cs" />
     <Compile Include="Models\ViewModels\CollectionVM.cs" />
     <Compile Include="Models\ViewModels\VendorVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

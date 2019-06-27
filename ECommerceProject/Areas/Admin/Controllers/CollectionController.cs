@@ -70,11 +70,19 @@ namespace ECommerceProject.Areas.Admin.Controllers
             if (db.collections.Any(x => x.Title.Equals(model.Title)))
             {
                 ModelState.AddModelError("", "Sorry, the collection name already exists");
+                ViewBag.VendorId = new SelectList(db.vendors, "Id", "Title");
                 return View(model);
             }
 
             if (ModelState.IsValid)
             {
+                if (file == null || file.ContentLength == 0)
+                {
+                    ModelState.AddModelError("", "Sorry you did not upload any image");
+                    ViewBag.VendorId = new SelectList(db.vendors, "Id", "Title");
+                    return View(model);
+                }
+
                 Collection collection = new Collection
                 {
                     Title = model.Title,
@@ -85,9 +93,10 @@ namespace ECommerceProject.Areas.Admin.Controllers
                 db.collections.Add(collection);
                 db.SaveChanges();
 
-                if(!ExtensionMethods.saveImage(collection.Id, file))
+                if(!ExtensionMethods.saveImage(collection.Id, file, "Collections"))
                 {
                     ModelState.AddModelError("", "The image file you uploaded might be of wrong format");
+                    ViewBag.VendorId = new SelectList(db.vendors, "Id", "Title");
                     return View(model);
                 }
                 else
@@ -131,7 +140,7 @@ namespace ECommerceProject.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(CollectionVM model)
+        public ActionResult Edit(CollectionVM model, HttpPostedFileBase file)
         {
             if (db.collections.Where(x => x.Title != model.Title).Any(x => x.Title.Equals(model.Title)))
             {
@@ -142,9 +151,23 @@ namespace ECommerceProject.Areas.Admin.Controllers
             {
                 Collection collection = db.collections.Where(x => x.Id.Equals(model.Id)).FirstOrDefault();
 
+                if(file!=null && file.ContentLength > 0)
+                {
+                    ExtensionMethods.DeleteImage(collection.Id, "Collections");
+
+                    if (ExtensionMethods.saveImage(collection.Id, file, "Collections"))
+                    {
+                        collection.ImageUrl = file.FileName;
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "The image file you uploaded might be of wrong format");
+                        return View(model);
+                    }
+                }
+
                 collection.Title = model.Title;
                 collection.Description = model.Description;
-                collection.ImageUrl = model.ImageUrl;
                 collection.VendorId = model.VendorId;
 
                 db.SaveChanges();
@@ -183,6 +206,7 @@ namespace ECommerceProject.Areas.Admin.Controllers
 
             db.collections.Remove(collection);
             db.SaveChanges();
+            ExtensionMethods.DeleteImage(id, "Collections");
             return RedirectToAction("Index");
         }
 

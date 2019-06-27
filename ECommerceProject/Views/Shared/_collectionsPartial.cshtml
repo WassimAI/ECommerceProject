@@ -1,60 +1,81 @@
-﻿<div class="heading-primary u-margin-bottom-small u-margin-top-small">
+﻿@model IEnumerable<ECommerceProject.Models.ViewModels.CollectionVM>
+
+<div class="heading-primary u-margin-bottom-small u-margin-top-small">
     Our Collections
 </div>
 
+@{
+    int count = Model.Count();
+}
+
 <div class="collections" id="collections">
+    <!--1st Dynamic Row-->
+    <div class="row collections__row">
+        @foreach (var item in Model)
+        {
+            <div class="col-1-of-3 collections__col">
+                <img src="~/Images/Uploads/Collections/@item.Id/@item.ImageUrl" alt="Sample Collection" class="collections__img" />
+                <div class="collections__description">
+                    <span class="collections__link">
+                        <a href="#" class="btn btn--primary u-margin-top-small">Check Collection &rarr;</a>
+                    </span>
+                </div>
+            </div>
+        }
+    </div>
+
     <!--First Row-->
-    <div class="row collections__row">
-        <div class="col-1-of-3 collections__col">
-            <img src="~/Images/Collections/collection_sample.jpg" alt="Sample Collection" class="collections__img" />
-            <div class="collections__description">
-                <span class="collections__link">
-                    <a href="#" class="btn btn--primary u-margin-top-small">Check Collection &rarr;</a>
-                </span>
+    @*<div class="row collections__row">
+            <div class="col-1-of-3 collections__col">
+                <img src="~/Images/Collections/collection_sample.jpg" alt="Sample Collection" class="collections__img" />
+                <div class="collections__description">
+                    <span class="collections__link">
+                        <a href="#" class="btn btn--primary u-margin-top-small">Check Collection &rarr;</a>
+                    </span>
+                </div>
             </div>
-        </div>
-        <div class="col-1-of-3 collections__col">
-            <img src="~/Images/Collections/women-collection.jpg" alt="Sample Collection" class="collections__img" />
-            <div class="collections__description">
-                <span class="collections__link">
-                    <a href="#" class="btn btn--primary u-margin-top-small">Check Collection &rarr;</a>
-                </span>
+            <div class="col-1-of-3 collections__col">
+                <img src="~/Images/Collections/women-collection.jpg" alt="Sample Collection" class="collections__img" />
+                <div class="collections__description">
+                    <span class="collections__link">
+                        <a href="#" class="btn btn--primary u-margin-top-small">Check Collection &rarr;</a>
+                    </span>
+                </div>
             </div>
-        </div>
-        <div class="col-1-of-3 collections__col">
-            <img src="~/Images/Collections/men-collection.jpg" alt="Sample Collection" class="collections__img" />
-            <div class="collections__description">
-                <span class="collections__link">
-                    <a href="#" class="btn btn--primary u-margin-top-small">Check Collection &rarr;</a>
-                </span>
+            <div class="col-1-of-3 collections__col">
+                <img src="~/Images/Collections/men-collection.jpg" alt="Sample Collection" class="collections__img" />
+                <div class="collections__description">
+                    <span class="collections__link">
+                        <a href="#" class="btn btn--primary u-margin-top-small">Check Collection &rarr;</a>
+                    </span>
+                </div>
             </div>
-        </div>
-    </div>
+        </div>*@
     <!--Second Row-->
-    <div class="row collections__row">
-        <div class="col-1-of-3 collections__col">
-            <img src="~/Images/Collections/kids-collection.jpg" alt="Sample Collection" class="collections__img" />
-            <div class="collections__description">
-                <span class="collections__link">
-                    <a href="/Product/all-products" class="btn btn--primary u-margin-top-small">Check Collection &rarr;</a>
-                </span>
+    @*<div class="row collections__row">
+            <div class="col-1-of-3 collections__col">
+                <img src="~/Images/Collections/kids-collection.jpg" alt="Sample Collection" class="collections__img" />
+                <div class="collections__description">
+                    <span class="collections__link">
+                        <a href="/Product/all-products" class="btn btn--primary u-margin-top-small">Check Collection &rarr;</a>
+                    </span>
+                </div>
             </div>
-        </div>
-        <div class="col-1-of-3 collections__col">
-            <img src="~/Images/Collections/purse-collection.jpg" alt="Sample Collection" class="collections__img" />
-            <div class="collections__description">
-                <span class="collections__link">
-                    <a href="#" class="btn btn--primary u-margin-top-small">Check Collection &rarr;</a>
-                </span>
+            <div class="col-1-of-3 collections__col">
+                <img src="~/Images/Collections/purse-collection.jpg" alt="Sample Collection" class="collections__img" />
+                <div class="collections__description">
+                    <span class="collections__link">
+                        <a href="#" class="btn btn--primary u-margin-top-small">Check Collection &rarr;</a>
+                    </span>
+                </div>
             </div>
-        </div>
-        <div class="col-1-of-3 collections__col">
-            <img src="~/Images/Collections/glass-collections.jpg" alt="Sample Collection" class="collections__img" />
-            <div class="collections__description">
-                <span class="collections__link">
-                    <a href="#" class="btn btn--primary u-margin-top-small">Check Collection &rarr;</a>
-                </span>
+            <div class="col-1-of-3 collections__col">
+                <img src="~/Images/Collections/glass-collections.jpg" alt="Sample Collection" class="collections__img" />
+                <div class="collections__description">
+                    <span class="collections__link">
+                        <a href="#" class="btn btn--primary u-margin-top-small">Check Collection &rarr;</a>
+                    </span>
+                </div>
             </div>
-        </div>
-    </div>
+        </div>*@
 </div>

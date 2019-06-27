@@ -9,12 +9,12 @@ namespace ECommerceProject.Extensions
 {
     public class ExtensionMethods
     {
-        public static bool saveImage(int id, HttpPostedFileBase file)
+        public static bool saveImage(int id, HttpPostedFileBase file, string folderName)
         {
             var originalDirectory = new DirectoryInfo(string.Format("{0}Images\\Uploads", HttpContext.Current.Server.MapPath(@"\")));
 
-            var pathString1 = Path.Combine(originalDirectory.ToString(), "Collections");
-            var pathString2 = Path.Combine(originalDirectory.ToString(), "Collections\\" + id.ToString());
+            var pathString1 = Path.Combine(originalDirectory.ToString(), folderName);
+            var pathString2 = Path.Combine(originalDirectory.ToString(), folderName + "\\" + id.ToString());
 
             if (!Directory.Exists(pathString1))
                 Directory.CreateDirectory(pathString1);
@@ -46,6 +46,15 @@ namespace ECommerceProject.Extensions
             }
 
             return true;
+        }
+
+        public static void DeleteImage(int id, string folderName)
+        {
+            var originalDirectory = new DirectoryInfo(string.Format("{0}Images\\Uploads", HttpContext.Current.Server.MapPath(@"\")));
+            string pathString = Path.Combine(originalDirectory.ToString(), folderName + "\\" + id.ToString());
+
+            if (Directory.Exists(pathString))
+                Directory.Delete(pathString, true);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿
+﻿@model ECommerceProject.Models.MainVM.HomePageVM
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_HomeLayout.cshtml";
@@ -8,7 +9,7 @@
     @Html.Partial("_featuredPartial")
 </section>
 <section class="section-collections">
-    @Html.Partial("_collectionsPartial")
+    @Html.Partial("_collectionsPartial", Model.Collections)
 </section>
 <section class="section-promotions">
     @Html.Partial("_promotionsPartial")
