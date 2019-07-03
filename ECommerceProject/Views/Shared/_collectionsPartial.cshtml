@@ -5,24 +5,40 @@
 </div>
 
 @{
-    int count = Model.Count();
+    //int count = Model.Count();
+    int count = 0;
 }
 
 <div class="collections" id="collections">
     <!--1st Dynamic Row-->
-    <div class="row collections__row">
-        @foreach (var item in Model)
+    @*<div class="row collections__row">*@
+    @foreach (var item in Model)
+    {
+        if ((count % 3) == 0)
         {
-            <div class="col-1-of-3 collections__col">
-                <img src="~/Images/Uploads/Collections/@item.Id/@item.ImageUrl" alt="Sample Collection" class="collections__img" />
-                <div class="collections__description">
-                    <span class="collections__link">
-                        <a href="#" class="btn btn--primary u-margin-top-small">Check Collection &rarr;</a>
-                    </span>
-                </div>
-            </div>
+            @:<div class="row collections__row">
         }
-    </div>
+
+        <div class="col-1-of-3 collections__col">
+            <img src="~/Images/Uploads/Collections/@item.Id/@item.ImageUrl" alt="Sample Collection" class="collections__img" />
+            <div class="collections__description">
+                <span class="collections__link">
+                    <a href="#" class="btn btn--primary u-margin-top-small">Check Collection &rarr;</a>
+                </span>
+            </div>
+        </div>
+
+        if (count == 2)
+        {
+            count = 0;
+            @:</div>
+        }
+        else
+        {
+            count++;
+        }
+    }
+    @*</div>*@
 
     <!--First Row-->
     @*<div class="row collections__row">

@@ -1,0 +1,100 @@
+﻿@model IEnumerable<ECommerceProject.Models.ViewModels.ProductVM>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="alert alert-info">All Products</h2>
+
+<p>
+    <a href="/Admin/Product/Create" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span>&nbsp;Create New</a>
+</p>
+<table class="table table-condensed table-striped">
+    <tr>
+        <th>
+            Collection
+        </th>
+        <th>
+            Image
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stockPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.oldPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.newPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Discount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isNew)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numberInStock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isOnSale)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Discontinued)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isFeatured)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CollectionName)
+        </td>
+        <td>
+            <img src="~/Images/Uploads/Products/@item.Id/Thumbs/@item.ImageUrl" alt="prod-image" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.stockPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.oldPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.newPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isNew)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numberInStock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isOnSale)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discontinued)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isFeatured)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

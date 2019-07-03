@@ -1,0 +1,126 @@
+﻿@model ECommerceProject.Models.ViewModels.ProductVM
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="alert alert-info">Product Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Collection
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CollectionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            Image
+        </dt>
+
+        <dd>
+            Image Goes Here
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.oldPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.oldPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.newPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.newPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stockPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stockPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isNew)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isNew)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numberInStock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numberInStock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isOnSale)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isOnSale)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discontinued)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discontinued)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isFeatured)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isFeatured)
+        </dd>
+
+    </dl>
+</div>
+<hr />
+<div>
+    Gallery Images Here
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

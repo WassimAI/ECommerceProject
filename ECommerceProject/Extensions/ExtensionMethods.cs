@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 
 namespace ECommerceProject.Extensions
@@ -43,6 +44,31 @@ namespace ECommerceProject.Extensions
 
                 // Save original
                 file.SaveAs(path);
+
+                #region ProductsAdditionalFolders
+                //Only for Products
+                if (folderName == "Products")
+                {
+                    var pathString3 = Path.Combine(originalDirectory.ToString(), "Products\\" + id.ToString() + "\\Thumbs");
+                    var pathString4 = Path.Combine(originalDirectory.ToString(), "Products\\" + id.ToString() + "\\Gallery");
+                    var pathString5 = Path.Combine(originalDirectory.ToString(), "Products\\" + id.ToString() + "\\Gallery\\Thumbs");
+
+                    if (!Directory.Exists(pathString3))
+                        Directory.CreateDirectory(pathString3);
+
+                    if (!Directory.Exists(pathString4))
+                        Directory.CreateDirectory(pathString4);
+
+                    if (!Directory.Exists(pathString5))
+                        Directory.CreateDirectory(pathString5);
+
+                    var path2 = string.Format("{0}\\{1}", pathString3, file.FileName);
+                    // Create and save thumb
+                    WebImage img = new WebImage(file.InputStream);
+                    img.Resize(150, 150);
+                    img.Save(path2);
+                }
+                #endregion
             }
 
             return true;

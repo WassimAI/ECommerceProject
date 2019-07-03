@@ -1,0 +1,129 @@
+﻿@model ECommerceProject.Models.Entities.Product
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.collection.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.collection.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.oldPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.oldPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.newPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.newPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stockPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stockPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isNew)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isNew)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numberInStock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numberInStock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isOnSale)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isOnSale)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discontinued)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discontinued)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isFeatured)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isFeatured)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -18,5 +18,7 @@ namespace ECommerceProject.Models
 
         public DbSet<Collection> collections { get; set; }
         public DbSet<Vendor> vendors { get; set; }
+
+        public DbSet<Product> products { get; set; }
     }
 }
