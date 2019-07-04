@@ -14,14 +14,19 @@ namespace ECommerceProject
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             /*For home default page*/
-            routes.MapRoute("Default", "", new { controller = "Home", action = "Index" }, new[] { "ECommerceProject.Controllers" });
+            //routes.MapRoute("Default", "", new { controller = "Home", action = "Index" }, new[] { "ECommerceProject.Controllers" });
+
+            /*For home Admin Default Page*/
+            //routes.MapRoute("Admin", "", new { controller = "Home", action = "Index" }, new[] { "ECommerceProject.Areas.Admin.Controllers" });
 
             /*For all pages in main area*/
             routes.MapRoute(
-                name: "Defaults",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                "Defaults",
+                "{controller}/{action}/{id}",
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                new[] { "ECommerceProject.Controllers" }
             );
+
         }
     }
 }

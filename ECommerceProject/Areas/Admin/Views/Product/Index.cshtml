@@ -5,7 +5,12 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2 class="alert alert-info">All Products</h2>
+@if (TempData["success"] != null)
+{
+    <div class="alert alert-success">@TempData["success"]</div>
+}
+
+<h3 class="alert alert-info">All Products</h3>
 
 <p>
     <a href="/Admin/Product/Create" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span>&nbsp;Create New</a>

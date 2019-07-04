@@ -1,18 +1,17 @@
-﻿@model ECommerceProject.Models.Entities.Product
+﻿@model ECommerceProject.Models.ViewModels.ProductVM
 
 @{
     ViewBag.Title = "Edit";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Edit</h2>
+<h2 class="alert alert-warning">Edit Product</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Edit","Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Product</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Id)
@@ -34,26 +33,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ImageUrl, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ImageUrl, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ImageUrl, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.oldPrice, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Price", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.oldPrice, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.oldPrice, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.newPrice, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.newPrice, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.newPrice, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -112,7 +95,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CollectionId, "CollectionId", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Collection", "CollectionId", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("CollectionId", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.CollectionId, "", new { @class = "text-danger" })
@@ -130,13 +113,73 @@
         </div>
 
         <div class="form-group">
+            @Html.Label("Add Image", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                <input type="file" name="file" id="ImageUpload" /><br />
+                <img id="imgPreview" src="~/Images/Uploads/Products/@Model.Id/@Model.ImageUrl" />
+            </div>
+        </div>
+
+        <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-success" />
             </div>
         </div>
     </div>
 }
 
+@if (!Model.GalleryImages.Any())
+{
+    <h3>There are no gallery images for this product.</h3>
+}
+
+<form action="/Admin/Product/SaveGalleryImages" data-id-model="@Model.Id" method="post" enctype="multipart/form-data" class="dropzone" id="dropzoneForm">
+    <div class="fallback">
+        <input type="file" name="file" multiple />
+        <input type="submit" value="Upload" />
+    </div>
+</form>
+
+<br /><br />
+
+@foreach (var image in Model.GalleryImages)
+{
+    <div style="display: inline-block;margin-right: 15px;">
+        <img src="/Images/Uploads/Products/@Model.Id/Gallery/Thumbs/@image" />
+        @Html.ActionLink("delete", "DeleteImage", "Product", new { @class = "deleteimage", data_name = image })
+    </div>
+}
+
+
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+@section Scripts{
+    <script>
+
+        $(function () {
+            /*
+            *Preview Selected Image
+            */
+
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $("img#imgPreview").attr("src", e.target.result).width(200).height(200);
+                    }
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+
+            $("#ImageUpload").change(function () {
+                readURL(this);
+            });
+
+        });
+
+    </script>
+}
