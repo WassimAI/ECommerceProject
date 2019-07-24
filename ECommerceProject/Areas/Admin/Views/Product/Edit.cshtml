@@ -133,10 +133,10 @@
     <h3>There are no gallery images for this product.</h3>
 }
 
-<form action="/Admin/Product/SaveGalleryImages" data-id-model="@Model.Id" method="post" enctype="multipart/form-data" class="dropzone" id="dropzoneForm">
+<form action="/Admin/Product/SaveGalleryImages" method="post" enctype="multipart/form-data" class="dropzone" id="dropzoneForm">
     <div class="fallback">
         <input type="file" name="file" multiple />
-        <input type="submit" value="Upload" />
+        @*<input type="submit" value="Upload" />*@
     </div>
 </form>
 
@@ -177,6 +177,38 @@
 
             $("#ImageUpload").change(function () {
                 readURL(this);
+            });
+
+        });
+
+        /*Drop zone scenario UPLOAD*/
+        Dropzone.options.dropzoneForm = {
+            acceptedFiles: "image/*",
+            init: function() {
+                this.on("complete", function (file) {
+                    if (this.getUploadingFiles().length === 0 && this.getQueuedFiles().length === 0) {
+                        location.reload();
+                    }
+                });
+
+                this.on("sending", function (file, xhr, formData) {
+                    formData.append("id", @Model.Id);
+                });
+            }
+        };
+
+        /*Drop zone scenario Delete Image*/
+        $("a.deleteimage").click(function (e) {
+            e.preventDefault();
+
+            if (!confirm("Confirm deletion")) return false;
+
+            var $this = $(this);
+            var url = "/Admin/Product/DeleteImage";
+            var imageName = $this.data("name");
+
+            $.post(url, { id: @Model.Id, imageName: imageName }, function(data) {
+                $this.parent().fadeOut("fast");
             });
 
         });

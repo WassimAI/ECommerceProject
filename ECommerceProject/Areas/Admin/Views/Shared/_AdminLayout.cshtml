@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Admin Zone</title>
     <link rel="stylesheet" href="~/Content/bootstrap.css">
+    <link href="~/Scripts/dropzone/basic.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/Scripts/dropzone/dropzone.css">
-    <link rel="stylesheet" href="~/Scripts/dropzone/basic.css">
     <link rel="shortcut icon" type="image/png" href="~/Styles/img/logo.png">
 </head>
 <body>
@@ -58,9 +58,9 @@
         <hr />
     </div>
     <!--To load all scripts from our own bundle-->
+    <script src="~/Scripts/dropzone/dropzone.js" type="text/javascript"></script>
     <script src="~/Scripts/jquery-1.9.0.js" type="text/javascript"></script>
     <script src="~/Scripts/bootstrap/js/bootstrap.js" type="text/javascript"></script>
-    <script src="~/Scripts/dropzone/dropzone.js" type="text/javascript"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

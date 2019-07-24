@@ -155,6 +155,9 @@ namespace ECommerceProject.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(ProductVM model, HttpPostedFileBase file)
         {
+            model.GalleryImages = Directory.EnumerateFiles(Server.MapPath("~/Images/Uploads/Products/" + model.Id + "/Gallery/Thumbs"))
+                                                .Select(fn => Path.GetFileName(fn));
+
             if (ModelState.IsValid)
             {
                 Product product = db.products.Find(model.Id);
@@ -248,6 +251,12 @@ namespace ECommerceProject.Areas.Admin.Controllers
 
                     string pathString1 = Path.Combine(originalDirectory.ToString(), "Products\\" + id.ToString() + "\\Gallery");
                     string pathString2 = Path.Combine(originalDirectory.ToString(), "Products\\" + id.ToString() + "\\Gallery\\Thumbs");
+
+                    //if (!Directory.Exists(pathString1))
+                    //    Directory.CreateDirectory(pathString1);
+
+                    //if (!Directory.Exists(pathString2))
+                    //    Directory.CreateDirectory(pathString2);
 
                     // Set image paths
                     var path = string.Format("{0}\\{1}", pathString1, file.FileName);
