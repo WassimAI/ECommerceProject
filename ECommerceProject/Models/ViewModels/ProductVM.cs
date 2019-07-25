@@ -47,7 +47,7 @@ namespace ECommerceProject.Models.ViewModels
         {
             get
             {
-                return oldPrice - oldPrice * Discount / 100;
+                return Math.Round(oldPrice - oldPrice * Discount / 100, 2);
             }
         }
         [Display(Name = "Stock Price")]

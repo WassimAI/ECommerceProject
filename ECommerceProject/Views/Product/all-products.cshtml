@@ -1,4 +1,4 @@
-﻿
+﻿@model ECommerceProject.Models.MainVM.ProductsPageVM
 @{
     ViewBag.Title = "AllProducts";
     Layout = "~/Views/Shared/_GeneralLayout.cshtml";
@@ -6,5 +6,5 @@
 
 <div class="heading-primary">Our Products</div>
 
-@Html.Partial("_ProductsPartial")
+@Html.Partial("_ProductsPartial", Model.Products)
 
