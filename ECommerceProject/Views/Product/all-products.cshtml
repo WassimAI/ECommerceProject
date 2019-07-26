@@ -8,3 +8,50 @@
 
 @Html.Partial("_ProductsPartial", Model.Products)
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal__content">
+
+        <div class="modal__content--header">
+            <span class="close">&times;</span>
+            <h2>Modal Header</h2>
+        </div>
+        <div class="modal__content--body">
+            <p>Some text in the Modal Body</p>
+            <p>Some other text...</p>
+        </div>
+        <div class="modal__content--footer">
+            <h3>Modal Footer</h3>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts{
+
+    <script>
+
+        $(function () {
+            
+            var modal = $("#myModal");
+            $(document).on("click", ".product__link", function (e) {
+                e.preventDefault();
+                modal.css({ 'display': 'block' });
+            });
+
+            $(document).on("click", ".close", function (e) {
+                e.preventDefault();
+                modal.css({ 'display': 'none' });
+            });
+        });
+
+        window.onclick = function (event) {
+            if (event.target == document.getElementById("modal")) {
+                document.getElementById("modal").style.display = "none";
+            }
+        }
+    </script>
+}
+
