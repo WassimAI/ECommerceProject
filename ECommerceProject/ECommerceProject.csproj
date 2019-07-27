@@ -287,6 +287,7 @@
     <Content Include="Scripts\bootstrap\js\bootstrap.min.js.map" />
     <Content Include="Scripts\jquery-1.9.0.min.map" />
     <Content Include="Styles\components\_modal.scss" />
+    <Content Include="Views\Product\_productDetailsPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

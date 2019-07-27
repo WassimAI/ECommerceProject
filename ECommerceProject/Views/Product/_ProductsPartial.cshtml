@@ -22,23 +22,23 @@
                     {
                         <span class="product__tag">NEW</span>
                     }
-                    <a href="#" class="product__link"><img class="product__img" src="~/Images/Uploads/Products/@item.Id/@item.ImageUrl" alt="prod-image" /></a>
+                    <a href="#" class="product__link" data-id="@item.Id"><img class="product__img" src="~/Images/Uploads/Products/@item.Id/@item.ImageUrl" alt="prod-image" /></a>
                 </div>
                 <div class="row"><div class="product__title">@item.Title</div></div>
-                <div class="row"><div class="product__description">@item.Description</div></div>
+                <div class="row"><div class="product__description">@item.summaryDescription</div></div>
                 <div class="row">
                     <div class="product__priceWrapper">
                         @if (!item.isOnSale)
                         {
-                            <div class="product__price product__price--show">$@item.oldPrice</div>
+                            <div class="product__price product__price--show">$ @item.oldPrice</div>
                         }
                         else
                         {
-                            <div class="product__price product__price--hide">$@item.oldPrice</div>
+                            <div class="product__price product__price--hide">$ @item.oldPrice</div>
                             <div class="product__discount product__discount--show">
-                                <span class="product__discount--text">Offer</span>
-                                <div class="product__discount--old">$@item.oldPrice</div>
-                                <div class="product__discount--new">$@item.newPrice</div>
+                                <span class="product__discount--text">Now at</span>
+                                <div class="product__discount--old">$ @item.oldPrice</div>
+                                <div class="product__discount--new">$ @item.newPrice</div>
                             </div>
                         }
 
@@ -62,5 +62,7 @@
     }
 
 </div>
+
+
 
 

@@ -71,10 +71,10 @@
         background-image: linear-gradient(to right, $color-primary-medium, $color-primary-dark);
         width: 80%;
         border-radius: 10px;
-        font-size: $medium-font-size;
+        font-size: $default-font-size;
         font-weight: bold;
         color: #fff;
-        font-family: 'Indie Flower', cursive;
+        font-family: 'Nunito Sans', sans-serif;
         padding: 1rem;
         //margin-bottom: 2rem;
         @include centerElement;

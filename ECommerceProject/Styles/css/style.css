@@ -714,10 +714,10 @@ body {
   background-image: linear-gradient(to right, #3399ff, #000066);
   width: 80%;
   border-radius: 10px;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #fff;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Nunito Sans', sans-serif;
   padding: 1rem;
   position: absolute;
   top: 50%;
@@ -742,6 +742,7 @@ body {
     float: right; }
 
 .modal {
+  font-family: 'Nunito Sans', sans-serif;
   display: none;
   /* Hidden by default */
   position: fixed;
@@ -765,23 +766,40 @@ body {
   .modal__content {
     position: relative;
     background-color: #fefefe;
+    display: table;
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 80%;
+    width: 60%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     animation-name: animatetop;
     animation-duration: 0.4s; }
     .modal__content--header {
       padding: 2px 16px;
-      background-color: #5cb85c;
-      color: white; }
+      background-color: #3399ff;
+      color: white;
+      height: 4rem; }
     .modal__content--body {
       padding: 2px 16px; }
+    .modal__content--description {
+      font-size: 1.5rem; }
+    .modal__content--price {
+      font-size: 1.5rem;
+      color: #000066;
+      font-weight: bolder; }
+    .modal__content--picture {
+      border-radius: 3px;
+      border: 2px solid #000066;
+      display: inline-block; }
     .modal__content--footer {
       padding: 2px 16px;
-      background-color: #5cb85c;
+      background-color: #3399ff;
       color: white; }
+    .modal__content--left {
+      display: table-cell; }
+    .modal__content--right {
+      display: table-cell;
+      font-size: 1.5rem; }
 
 /* The Close Button */
 .close {

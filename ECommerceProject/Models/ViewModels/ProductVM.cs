@@ -36,9 +36,9 @@ namespace ECommerceProject.Models.ViewModels
         [StringLength(30, ErrorMessage = "Title can be 30 characters max")]
         public string Title { get; set; }
         [Required]
-        [StringLength(250, ErrorMessage = "Title can be 30 characters max")]
+        [StringLength(250)]
         public string Description { get; set; }
-        [StringLength(250, ErrorMessage = "Title can be 30 characters max")]
+        [StringLength(250)]
         public string ImageUrl { get; set; }
         [Display(Name = "Old Price")]
         public decimal oldPrice { get; set; }
@@ -68,5 +68,6 @@ namespace ECommerceProject.Models.ViewModels
         public bool isFeatured { get; set; } = false;
         public string CollectionName { get; set; }
         public IEnumerable<string> GalleryImages { get; set; }
+        public string summaryDescription { get { return Description.Length < 25 ? Description : Description.Substring(0, 25) + "..."; } }
     }
 }

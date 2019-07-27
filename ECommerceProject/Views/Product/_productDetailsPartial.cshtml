@@ -1,0 +1,49 @@
+﻿@model ECommerceProject.Models.ViewModels.ProductVM
+
+<div class="modal__content--header">
+    <span class="close">&times;</span>
+    <h2>The Product Details</h2>
+</div>
+<div class="modal__content--body">
+    <div class="row">
+        <h2>@Model.Title</h2>
+        <p class="modal__content--description">@Model.Description</p>
+        <p class="modal__content--price">$ @Model.newPrice</p>
+        <hr />
+    </div>
+    <div class="row">
+        <div class="col-1-of-2">
+            <div class="modal__content--right">
+                <div class="modal__content--picture">
+                    <img src="~/Images/Uploads/Products/@Model.Id/@Model.ImageUrl" />
+                </div>
+            </div>
+        </div>
+        <div class="col-1-of-2">
+            <div class="modal__content--right">
+                Check all variants &rarr;
+                <hr />
+                @if (Model.GalleryImages != null)
+                {
+                    foreach (var image in Model.GalleryImages)
+                    {
+                        <div style="display: inline-block">
+                            <a class="fancybox" @*rel="gallery1" href="/Images/Uploads/Products/@Model.Id/Gallery/@image"*@>
+                                <img src="/Images/Uploads/Products/@Model.Id/Gallery/Thumbs/@image" />
+                            </a>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        
+        
+    </div>
+
+
+</div>
+<div class="modal__content--footer">
+    <h3>Add to Cart Now</h3>
+</div>
