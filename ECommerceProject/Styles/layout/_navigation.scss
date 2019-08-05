@@ -129,7 +129,7 @@
     }
 
     &__checkbox:checked ~ &__background {
-        transform: scale(22);
+        transform: scale(20);
 
         @include respond(tab-port) {
             transform: scale(80);

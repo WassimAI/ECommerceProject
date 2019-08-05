@@ -1,0 +1,10 @@
+﻿@model ECommerceProject.Models.MainVM.CollectionsPageVM
+
+
+@{
+    ViewBag.Title = "AllCollections";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+
+@Html.Partial("_collectionsPartial", Model.Collections)
+

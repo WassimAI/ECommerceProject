@@ -29,6 +29,7 @@
             background-color: $color-primary-medium;
             color: white;
             height: 4rem;
+            font-size: $medium-font-size;
         }
 
         &--body {
@@ -55,6 +56,11 @@
             padding: 2px 16px;
             background-color: $color-primary-medium;
             color: white;
+
+            &-wrapper{
+                padding:1rem;
+                text-align: center;
+            }
         }
 
         &--left{
@@ -72,7 +78,7 @@
 
 /* The Close Button */
 .close {
-    color: #aaa;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;

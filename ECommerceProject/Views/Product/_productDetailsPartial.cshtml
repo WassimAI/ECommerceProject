@@ -2,7 +2,7 @@
 
 <div class="modal__content--header">
     <span class="close">&times;</span>
-    <h2>The Product Details</h2>
+    <div>Product Details</div>
 </div>
 <div class="modal__content--body">
     <div class="row">
@@ -21,7 +21,7 @@
         </div>
         <div class="col-1-of-2">
             <div class="modal__content--right">
-                Check all variants &rarr;
+                <a href="#" class="btn btn--secondary">Check all variants &rarr;</a><br /><br />
                 <hr />
                 @if (Model.GalleryImages != null)
                 {
@@ -30,7 +30,7 @@
                         <div style="display: inline-block">
                             <a class="fancybox" @*rel="gallery1" href="/Images/Uploads/Products/@Model.Id/Gallery/@image"*@>
                                 <img src="/Images/Uploads/Products/@Model.Id/Gallery/Thumbs/@image" />
-                            </a>
+                            </a>&nbsp;
                         </div>
                     }
                 }
@@ -44,6 +44,6 @@
 
 
 </div>
-<div class="modal__content--footer">
-    <h3>Add to Cart Now</h3>
+<div class="modal__content--footer modal__content--footer-wrapper">
+        <a class="btn btn--cart">Add to Cart</a>
 </div>

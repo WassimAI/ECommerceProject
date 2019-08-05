@@ -221,6 +221,7 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\VendorController.cs" />
+    <Compile Include="Controllers\CollectionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Extensions\ExtensionMethods.cs" />
@@ -232,6 +233,7 @@
     <Compile Include="Models\Entities\Collection.cs" />
     <Compile Include="Models\Entities\Product.cs" />
     <Compile Include="Models\Entities\Vendor.cs" />
+    <Compile Include="Models\MainVM\CollectionsPageVM.cs" />
     <Compile Include="Models\MainVM\HomePageVM.cs" />
     <Compile Include="Models\MainVM\ProductsPageVM.cs" />
     <Compile Include="Models\ViewModels\CollectionVM.cs" />
@@ -288,6 +290,7 @@
     <Content Include="Scripts\jquery-1.9.0.min.map" />
     <Content Include="Styles\components\_modal.scss" />
     <Content Include="Views\Product\_productDetailsPartial.cshtml" />
+    <Content Include="Views\Collection\all-collections.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

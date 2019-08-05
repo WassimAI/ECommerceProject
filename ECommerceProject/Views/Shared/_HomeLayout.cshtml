@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Nunito+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/Styles/css/linea_font.css">
     <link rel="stylesheet" href="~/Styles/css/style.css">
+    <link rel="stylesheet" href="~/Content/jquery.fancybox.css">
     <link rel="shortcut icon" type="image/png" href="~/Styles/img/logo.png">
     @*<link rel="stylesheet" href="Scripts/bootstrap/css/bootstrap.css">*@
     @*@Styles.Render("~/Styles/CSS")*@
@@ -26,13 +27,10 @@
 
         <div class="navigation__nav">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#collections" class="navigation__link">Women Collection</a></li>
-                <li class="navigation__item"><a href="#collections" class="navigation__link">Kids Collection</a></li>
-                <li class="navigation__item"><a href="#collections" class="navigation__link">Men Collection</a></li>
-                <li class="navigation__item"><a href="#collections" class="navigation__link">Accessories</a></li>
-                <li class="navigation__item"><a href="#collections" class="navigation__link">Purses</a></li>
-                <li class="navigation__item"><a href="#collections" class="navigation__link">Sun Glasses</a></li>
-                <li class="navigation__item"><a href="#promotions" class="navigation__link">Promotions</a></li>
+                <li class="navigation__item"><a href="#collections" class="navigation__link">Featured</a></li>
+                <li class="navigation__item"><a href="#collections" class="navigation__link">Promotions</a></li>
+                <li class="navigation__item"><a href="#collections" class="navigation__link">All Collections</a></li>
+                <li class="navigation__item"><a href="#collections" class="navigation__link">All Products</a></li>
                 <li class="navigation__item"><a href="#" class="navigation__link">About us</a></li>
                 <li class="navigation__item"><a href="#" class="navigation__link">Contact us</a></li>
                 <li class="navigation__item"><a href="#" class="navigation__link">Our Story</a></li>
@@ -125,5 +123,6 @@
     @RenderSection("scripts", required: false)
     <script src="~/Scripts/jquery-3.4.1.min.js" type="text/javascript"></script>
     <script src="~/Scripts/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.fancybox.js" type="text/javascript"></script>
 </body>
 </html>
