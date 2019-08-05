@@ -40,5 +40,14 @@ namespace ECommerceProject.Controllers
 
             return View("_productDetailsPartial", model);
         }
+
+        [ActionName("featured-products")]
+        public ActionResult FeaturedProducts()
+        {
+            var list = new List<ProductVM>();
+            list = db.products.ToArray().Where(x=> x.isFeatured == true).Select(x => new ProductVM(x)).ToList();
+
+            return View(list);
+        }
     }
 }

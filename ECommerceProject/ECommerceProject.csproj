@@ -291,6 +291,8 @@
     <Content Include="Styles\components\_modal.scss" />
     <Content Include="Views\Product\_productDetailsPartial.cshtml" />
     <Content Include="Views\Collection\all-collections.cshtml" />
+    <Content Include="Views\Product\featured-products.cshtml" />
+    <Content Include="Styles\pages\_featured.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

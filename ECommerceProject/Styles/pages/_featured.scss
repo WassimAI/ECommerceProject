@@ -1,0 +1,80 @@
+﻿.featured{
+    position: relative;
+    margin-top: 2rem;
+
+    &__item{
+        display: table;
+        background-image:linear-gradient(to right, rgba($color-primary-light, .7), rgba($color-primary-dark, .5));
+        border-radius: 5px;
+    }
+
+    &__left{
+        display: table-cell;
+        width: 30%;
+        vertical-align: middle;
+
+        &--img {
+            transition: all .3s;
+
+            img{
+                border: 2px solid $color-primary-medium;
+                box-shadow: 0 .5rem 1rem rgba(black, .7);
+            }
+
+            &:hover {
+                transform: scale(1.2);
+            }
+
+            &:hover img {
+                box-shadow: 0 1rem 2rem rgba(black, .7);
+            }
+        }
+    }
+
+    &__right{
+        display: table-cell;
+        width: 70%;
+        vertical-align: top;
+
+        &--description {
+            color: $color-primary-dark;
+            font-size: $medium-font-size;
+            font-family: 'Indie Flower', cursive;
+            padding: 2px;
+        }
+
+        &--price {
+            color: $color-green-dark;
+            font-size: $medium-font-size;
+            font-weight: bolder;
+            padding: 2px;
+            width: 20%;
+            background-image:linear-gradient(to right, rgba($color-green-light, .7), rgba($color-green-dark, .5));
+            box-shadow: 0 .5rem 1rem rgba(black, .7);
+            border-radius: 3px;
+        }
+
+        &--oldprice {
+            color: $color-red-dark;
+            font-size: $default-font-size;
+            font-weight: bolder;
+            text-decoration: line-through;
+            padding: 3px;
+        }
+
+        &--discount {
+            margin-top: 1rem;
+            padding: 2px;
+
+            p{
+                font-size: $default-font-size;
+                color: $color-primary-dark;
+                font-style: italic;
+            }
+        }
+
+        &--buy{
+            margin-top: 1rem;
+        }
+    }
+}
