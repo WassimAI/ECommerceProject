@@ -9,5 +9,7 @@ namespace ECommerceProject.Models.MainVM
     public class HomePageVM
     {
         public IEnumerable<CollectionVM> Collections { get; set; }
+        public IEnumerable<ProductVM> FeaturedProducts { get; set; }
+        public IEnumerable<ProductVM> PromotedProducts { get; set; }
     }
 }

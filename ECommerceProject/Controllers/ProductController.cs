@@ -49,5 +49,14 @@ namespace ECommerceProject.Controllers
 
             return View(list);
         }
+
+        [ActionName("promotions")]
+        public ActionResult PromotedProducts()
+        {
+            var list = new List<ProductVM>();
+            list = db.products.ToArray().Where(x => x.isOnSale == true).Select(x => new ProductVM(x)).ToList();
+
+            return View(list);
+        }
     }
 }

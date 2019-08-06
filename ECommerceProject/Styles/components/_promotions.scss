@@ -31,7 +31,7 @@
     }
 
     &__left {
-        width: 40%;
+        width: 50%;
         display: table-cell;
         padding: 2rem 3rem;
         vertical-align: middle;
@@ -106,7 +106,7 @@
     }
 
     &__right {
-        width: 60%;
+        width: 50%;
         display: table-cell;
         vertical-align: middle;
         overflow: hidden;
@@ -117,9 +117,12 @@
     }
 
     &__img {
+        overflow: hidden;
 
         img {
-            width: 80%;
+
+            width: 150px;
+            height: 225px;
         }
 
         &:hover {

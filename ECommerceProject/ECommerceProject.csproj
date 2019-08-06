@@ -293,6 +293,7 @@
     <Content Include="Views\Collection\all-collections.cshtml" />
     <Content Include="Views\Product\featured-products.cshtml" />
     <Content Include="Styles\pages\_featured.scss" />
+    <Content Include="Views\Product\promotions.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

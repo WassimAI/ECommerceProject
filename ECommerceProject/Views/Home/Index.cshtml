@@ -6,12 +6,12 @@
 }
 
 <section class="section-featured">
-    @Html.Partial("_featuredPartial")
+    @Html.Partial("_featuredPartial", Model.FeaturedProducts)
 </section>
 <section class="section-collections">
     @Html.Partial("_collectionsPartial", Model.Collections)
 </section>
 <section class="section-promotions">
-    @Html.Partial("_promotionsPartial")
+    @Html.Partial("_promotionsPartial", Model.PromotedProducts)
 </section>
 

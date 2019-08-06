@@ -1,0 +1,9 @@
+﻿@model IEnumerable<ECommerceProject.Models.ViewModels.ProductVM>
+
+@{
+    ViewBag.Title = "promotions";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+
+@Html.Partial("_ProductsPartial", Model)
+

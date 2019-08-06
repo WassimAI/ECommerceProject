@@ -1,15 +1,22 @@
-﻿<div class="feature">
+﻿@model IEnumerable<ECommerceProject.Models.ViewModels.ProductVM>
+
+
+@{ 
+    var item1 = Model.ElementAt(0);
+    var item2 = Model.ElementAt(1);
+}
+<div class="feature" id="featured">
     <div class="heading-primary u-margin-bottom-medium">Featured Items</div>
     <div class="row feature__row">
         <div class="feature__container u-margin-bottom-medium">
             <div class="feature__left">
-                <img src="~/Images/Featured/featured-item-1.jpg" alt="feature-image" class="feature__img" />
+                <img src="~/Images/Uploads/Products/@item1.Id/@item1.ImageUrl" alt="feature-image" class="feature__img" />
                 <div class="feature__img-caption feature__img-caption-1">
                     <span class="feature__link">
                         <a href="#" class="btn btn--primary">Check Item Details &rarr;</a>
                     </span>
                 </div>
-                <img src="~/Images/Featured/featured-item-2.jpg" alt="feature-image" class="feature__img" />
+                <img src="~/Images/Uploads/Products/@item2.Id/@item2.ImageUrl" alt="feature-image" class="feature__img" />
                 <div class="feature__img-caption feature__img-caption-2">
                     <span class="feature__link">
                         <a href="#" class="btn btn--primary">Check Item Details &rarr;</a>
@@ -19,18 +26,18 @@
             <div class="feature__right">
                 <div class="row feature__right--row feature__right--row-1">
                     <div class="heading-secondary">
-                        Amazing Purse MK
+                        @item1.Title
                     </div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    @item1.Description
                     <div class="feature__btn-wrapper u-margin-top-small">
                         <a href="#" class="btn btn--buy">Buy Now</a>
                     </div>
                 </div>
                 <div class="row feature__right--row feature__right--row-2">
                     <div class="heading-secondary">
-                        Cool Converse
+                        @item2.Title
                     </div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    @item2.Description
                     <div class="feature__btn-wrapper u-margin-top-small">
                         <a href="#" class="btn btn--buy">Buy Now</a>
                     </div>
