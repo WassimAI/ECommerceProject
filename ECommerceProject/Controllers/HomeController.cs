@@ -11,7 +11,7 @@ namespace ECommerceProject.Controllers
 {
     public class HomeController : Controller
     {
-        ApplicationDbContext db = new ApplicationDbContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
         // GET: Home
         public ActionResult Index()
         {

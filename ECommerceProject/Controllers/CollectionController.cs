@@ -11,7 +11,7 @@ namespace ECommerceProject.Controllers
 {
     public class CollectionController : Controller
     {
-        ApplicationDbContext db = new ApplicationDbContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
         // GET: Collection
         [ActionName("all-collections")]
         public ActionResult AllCollections()

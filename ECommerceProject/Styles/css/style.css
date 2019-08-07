@@ -422,6 +422,12 @@ body {
   .navigation-top-link:hover, .navigation-top-link:active {
     background-color: #e6faff;
     color: #000066; }
+  .navigation-top-link-right {
+    color: #3399ff !important; }
+    .navigation-top-link-right-cart {
+      width: 4rem; }
+  .navigation-top-right {
+    float: right; }
 
 .collections__row {
   border-bottom: 0.5px solid rgba(0, 0, 102, 0.5); }

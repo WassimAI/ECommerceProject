@@ -20,5 +20,6 @@ namespace ECommerceProject.Models
         public DbSet<Vendor> vendors { get; set; }
 
         public DbSet<Product> products { get; set; }
+        public DbSet<UserAccount> usersAccounts { get; set; }
     }
 }

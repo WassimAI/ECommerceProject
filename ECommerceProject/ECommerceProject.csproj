@@ -224,6 +224,7 @@
     <Compile Include="Controllers\CollectionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\UserAccountController.cs" />
     <Compile Include="Extensions\ExtensionMethods.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -232,12 +233,14 @@
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Entities\Collection.cs" />
     <Compile Include="Models\Entities\Product.cs" />
+    <Compile Include="Models\Entities\UserAccount.cs" />
     <Compile Include="Models\Entities\Vendor.cs" />
     <Compile Include="Models\MainVM\CollectionsPageVM.cs" />
     <Compile Include="Models\MainVM\HomePageVM.cs" />
     <Compile Include="Models\MainVM\ProductsPageVM.cs" />
     <Compile Include="Models\ViewModels\CollectionVM.cs" />
     <Compile Include="Models\ViewModels\ProductVM.cs" />
+    <Compile Include="Models\ViewModels\RegisterUserVM.cs" />
     <Compile Include="Models\ViewModels\VendorVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -294,6 +297,7 @@
     <Content Include="Views\Product\featured-products.cshtml" />
     <Content Include="Styles\pages\_featured.scss" />
     <Content Include="Views\Product\promotions.cshtml" />
+    <Content Include="Views\UserAccount\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -304,7 +308,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Styles\css\" />
+    <Folder Include="Styles\css\fonts\" />
     <Folder Include="Styles\js\" />
   </ItemGroup>
   <PropertyGroup>

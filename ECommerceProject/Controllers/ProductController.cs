@@ -13,7 +13,7 @@ namespace ECommerceProject.Controllers
 {
     public class ProductController : Controller
     {
-        ApplicationDbContext db = new ApplicationDbContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
         // GET: Product
         [ActionName("all-products")]
         public ActionResult AllProducts()
