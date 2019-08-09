@@ -11,11 +11,11 @@ namespace ECommerceProject.Models.ViewModels
         public int Id { get; set; }
         public Guid UserID { get; set; }
         [Required]
-        [StringLength(30)]
-        [Display(Name ="User Name")]
-        public string UserName { get; set; }
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
         [Required]
         [DataType(DataType.EmailAddress)]
+        [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")]
         [EmailAddress]
         public string Email { get; set; }
         [Required]

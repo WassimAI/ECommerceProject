@@ -27,18 +27,34 @@
                 <div class="navigation-top-item">
                     <a href="/Product/promotions" class="navigation-top-link">Promotions</a>
                 </div>
+
+                @if (Session["UserId"] == null)
+                {
+                    <div class="navigation-top-item navigation-top-right">
+                        <a href="/UserAccount/Login" class="navigation-top-link navigation-top-link-right">Login</a>
+                    </div>
+                    <div class="navigation-top-item navigation-top-right">
+                        <a href="/UserAccount/Register" class="navigation-top-link navigation-top-link-right">Register</a>
+                    </div>
+                }
+                else
+                {
+                    <div class="navigation-top-item navigation-top-right">
+                        <a href="#" id="logout-btn" class="navigation-top-link navigation-top-link-right">Logout</a>
+                    </div>
+                }
+
+                @if (Session["UserId"] != null)
+                {
+                    <div class="navigation-top-item navigation-top-right">
+
+                        <a href="#" class="navigation-top-link navigation-top-link-right">@Session["Email"].ToString()</a>
+
+                    </div>
+                }
+
                 <div class="navigation-top-item navigation-top-right">
-                    <a href="/UserAccount/Register" class="navigation-top-link navigation-top-link-right">Register</a>
-                </div>
-                <div class="navigation-top-item navigation-top-right">
-                    <a href="/UserAccount/Login" class="navigation-top-link navigation-top-link-right">Login</a>
-                </div>
-                <div class="navigation-top-item navigation-top-right">
-                    <a href="/UserAccount/Login" class="navigation-top-link navigation-top-link-right">Hi UserName</a>
-                </div>
-                <div class="navigation-top-item navigation-top-right">
-                    (<span>0</span>)
-                    <a href="/UserAccount/Login" class="navigation-top-link navigation-top-link-right">Cart</a>
+                    <a href="#" class="navigation-top-link navigation-top-link-right">(0)</a>
                 </div>
             </div>
         </div>
@@ -76,6 +92,7 @@
     <script src="~/Scripts/jquery-3.4.1.min.js" type="text/javascript"></script>
     <script src="~/Scripts/jquery.fancybox.js" type="text/javascript"></script>
     <script src="~/Scripts/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <script src="~/Scripts/myScripts/allScripts.js" type="text/javascript"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
