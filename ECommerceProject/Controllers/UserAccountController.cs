@@ -53,7 +53,7 @@ namespace ECommerceProject.Controllers
             db.usersAccounts.Add(user);
             db.SaveChanges();
 
-            TempData["success"] = "You have successfully registered, you can noe log in with your username / email and password";
+            TempData["success"] = "You have successfully registered, you can now log in with your username / email and password";
 
             return RedirectToAction("Login", "UserAccount");
         }
@@ -70,7 +70,7 @@ namespace ECommerceProject.Controllers
         {
             if (!ModelState.IsValid)
             {
-                ModelState.AddModelError("", "Please fill in the fields below");
+                ModelState.AddModelError("", "Please make sure you enter correct data");
                 return View(model);
             }
 

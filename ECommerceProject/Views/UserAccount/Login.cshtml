@@ -7,42 +7,29 @@
 
 @if (TempData["success"] != null)
 {
-    <div class="alert alert-success">@TempData["success"]</div>
+    <div class="alert alert__success">@TempData["success"]</div>
 }
 
-<h2>Login</h2>
-
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-4">
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-4">
-                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-4">
-                <input type="submit" value="Login" class="btn btn-primary" />
+<div class="section-form">
+    <div class="row">
+        <div class="col-1-of-3">
+            <div class="wrapper-form">
+                <form action="/UserAccount/Login" method="post" name="login-form" class="form">
+                    <div class="heading-secondary form__title">Login</div><br />
+                    @Html.ValidationSummary(true, "", new { @style = "color:red", @class="form__validation" })
+                    <div class="form__group">
+                        <input type="email" name="Email"  id="email" class="form__input" placeholder="Enter your Email" required />
+                        <label class="form__label" for="email">Email Address</label>
+                    </div>
+                    <div class="form__group">
+                        <input type="password" name="Password"  id="password" class="form__input" placeholder="Enter your Password" required />
+                        <label class="form__label" for="password">Enter Password</label>
+                    </div>
+                    <div class="form__group">
+                        <button class="btn btn--primary">Login &rarr;</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
 </div>

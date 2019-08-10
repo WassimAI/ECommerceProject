@@ -5,10 +5,62 @@
     Layout = "~/Views/Shared/_GeneralLayout.cshtml";
 }
 
-<h2>Registration Form</h2>
-<h3>It only takes minutes...</h3>
+<div class="section-form">
+    <div class="row">
 
-@using (Html.BeginForm()) 
+            <div class="wrapper-form">
+                <form action="/UserAccount/Register" method="post" name="login-form" class="form">
+                    @Html.ValidationSummary(true, "", new { @style = "color:red", @class = "form__validation" })
+                    <div class="col-1-of-3">
+                        <div class="heading-secondary form__title">Registration Form</div>
+                        <div class="heading-tertiary">It only takes minutes</div><br />
+                        <div class="form__group">
+                            <input type="email" name="Email" id="email" class="form__input" placeholder="Enter your Email" required />
+                            <label class="form__label" for="email">Email Address</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="password" name="Password" id="password" class="form__input" placeholder="Enter your Password" required />
+                            <label class="form__label" for="password">Enter Password</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" name="country" id="country" class="form__input" placeholder="Enter your Country" required />
+                            <label class="form__label" for="country">Enter Country</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" name="City" id="city" class="form__input" placeholder="Enter your City" required />
+                            <label class="form__label" for="password">Enter City</label>
+                        </div>
+                        <div class="form__group">
+                            <button tabindex="5" class="btn btn--primary">Register &rarr;</button>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="heading-secondary form__title">&nbsp;</div>
+                        <div class="heading-tertiary">&nbsp;</div><br />
+                        <div class="form__group">
+                            <input type="text" name="Province" id="province" class="form__input" placeholder="Enter your Province" required />
+                            <label class="form__label" for="password">Enter Province</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" name="Street" id="street" class="form__input" placeholder="Enter your Street" />
+                            <label class="form__label" for="street">Enter Street</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" name="Residence" id="residence" class="form__input" placeholder="Enter your Residence" required />
+                            <label class="form__label" for="residence">Enter Residence</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" name="Phone" id="phone" class="form__input" placeholder="Enter your Phone" />
+                            <label class="form__label" for="password">Enter Phone</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+    </div>
+</div>
+
+@*@using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
@@ -86,4 +138,4 @@
             </div>
         </div>
     </div>
-}
+}*@

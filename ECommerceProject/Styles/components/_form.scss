@@ -1,0 +1,71 @@
+﻿.section-form{
+
+}
+
+.wrapper-form {
+
+}
+
+.form {
+
+    &__group:not(:last-child){
+        margin-bottom: 2rem;
+    }
+
+    &__input {
+        font-family: inherit; /*It will inherit the default font family*/
+        color: inherit;
+        padding: 1.5rem;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($color-white-blue, .5);
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+        transition: all .3s;
+
+        &::-webkit-input-placeholder { /*This is to style the placeholder*/
+            color: $color-green-dark;
+        }
+
+        &:focus {
+            outline: none; /*This is to eliminate the default browser border on input elements when focused*/
+            box-shadow: 0 1rem 2rem rgba(#000, .1);
+            border-bottom: 3px solid $color-primary-dark;
+        }
+
+        /*Now to style an element while it is focused and invalid we can do this:*/
+        &:focus:invalid {
+            border-bottom: 3px solid $color-red-light;
+        }
+    }
+
+
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+    }
+
+    /*To style the label when the placeholder is still showing*/
+    &__input:placeholder-shown + &__label { /*+ is to select the adjacent sibling*/
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &__validation{
+        color: $color-red-dark;
+        font-weight: bold;
+        font-size: $default-font-size;
+    }
+
+    &__title {
+    }
+
+}

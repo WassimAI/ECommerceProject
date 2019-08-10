@@ -301,6 +301,8 @@
     <Content Include="Views\Product\promotions.cshtml" />
     <Content Include="Views\UserAccount\Register.cshtml" />
     <Content Include="Views\UserAccount\Login.cshtml" />
+    <Content Include="Styles\components\_form.scss" />
+    <Content Include="Styles\components\_alert.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

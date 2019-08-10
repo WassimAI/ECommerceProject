@@ -1,0 +1,28 @@
+﻿.alert {
+    font-size: $default-font-size;
+    padding: 1rem;
+    width: 80%;
+    margin-bottom: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: .5rem;
+    border-radius: 3px;
+    box-shadow: 0 1rem 2rem rgba(#000, .7);
+
+    &__primary {
+
+    }
+
+    &__success {
+        background-image: linear-gradient(to right, rgba($color-green-light, .7), rgba($color-green-dark, .5));
+        color: $color-green-dark;
+    }
+
+    &__danger {
+
+    }
+
+    &__info {
+
+    }
+}

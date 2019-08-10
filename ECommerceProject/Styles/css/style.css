@@ -424,8 +424,6 @@ body {
     color: #000066; }
   .navigation-top-link-right {
     color: #3399ff !important; }
-    .navigation-top-link-right-cart {
-      width: 4rem; }
   .navigation-top-right {
     float: right; }
 
@@ -492,6 +490,14 @@ body {
 .heading-secondary {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  text-align: center; }
+
+.heading-tertiary {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 1rem;
   text-transform: uppercase;
@@ -894,3 +900,62 @@ body {
   to {
     top: 0;
     opacity: 1; } }
+
+.form {
+  /*To style the label when the placeholder is still showing*/ }
+  .form__group:not(:last-child) {
+    margin-bottom: 2rem; }
+  .form__input {
+    font-family: inherit;
+    /*It will inherit the default font family*/
+    color: inherit;
+    padding: 1.5rem;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba(204, 255, 230, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+    transition: all .3s;
+    /*Now to style an element while it is focused and invalid we can do this:*/ }
+    .form__input::-webkit-input-placeholder {
+      /*This is to style the placeholder*/
+      color: #00331f; }
+    .form__input:focus {
+      outline: none;
+      /*This is to eliminate the default browser border on input elements when focused*/
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #000066; }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid #ff6666; }
+  .form__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    display: block;
+    transition: all .3s; }
+  .form__input:placeholder-shown + .form__label {
+    /*+ is to select the adjacent sibling*/
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
+  .form__validation {
+    color: #990000;
+    font-weight: bold;
+    font-size: 1.5rem; }
+
+.alert {
+  font-size: 1.5rem;
+  padding: 1rem;
+  width: 80%;
+  margin-bottom: 1rem;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: .5rem;
+  border-radius: 3px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7); }
+  .alert__success {
+    background-image: linear-gradient(to right, rgba(77, 255, 184, 0.7), rgba(0, 51, 31, 0.5));
+    color: #00331f; }
